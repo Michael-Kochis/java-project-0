@@ -42,7 +42,7 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 - - [ ] withdrawing, depositing, transferring from all accounts
 - - [ ] canceling accounts
 
-## JUNit
+## JUnit
 - [ ]	100% test coverage for the service layer is expected using JUnit
 
 ## Log4J
