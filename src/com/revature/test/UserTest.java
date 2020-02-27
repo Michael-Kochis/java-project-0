@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.revature.model.BankID;
+import com.revature.model.PHash;
 import com.revature.model.User;
 
 public class UserTest {
@@ -92,13 +93,33 @@ public class UserTest {
 	
 	@Test
 	public void testUserHashCode() {
-		assertEquals(36518, user.hashCode());
+		assertEquals(user.hashCode(), user.hashCode());
 	}
 
 	@Test
 	public void testUserEquals() {
 		User user2 = user;
 		assertTrue(user.equals(user2));		
+	}
+	
+	@Test
+	public void testUserNotEqualNull() {
+		assertFalse(user.equals(null));
+	}
+	
+	@SuppressWarnings("unlikely-arg-type")
+	@Test
+	public void testUserNotEqualWrongClass() {
+		PHash ptest = new PHash();
+		
+		assertFalse(user.equals(ptest));
+	}
+	
+	@Test
+	public void testUserNotEqualBankID() {
+		User user2 = new User(user.getName());
+		
+		assertFalse(user.equals(user2));
 	}
 
 	@Test

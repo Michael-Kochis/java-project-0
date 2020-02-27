@@ -7,12 +7,13 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 
 ## Agile Requirements
 - [ ] Develop using the agile methodologies taught in class
-- - [ ] You should be using TDD (see JUnit requirements)
+- - [ ] You should be using TDD (see JUnit4 requirements)
 - - [ ] All transactions should be logged (see Log4J requirements)
 
 ## Java Requirements
 - [x]	Build the application using Java 8
 - [ ]	All interaction with the user should be done through the console using the `Scanner` class
+- [ ]   All objects modeled will include the hashCode, equals, and toString methods.
 
 ## User Accounts
 - [ ]	Customers of the bank should be able to register with a username and password, and apply to open an account.
@@ -42,8 +43,8 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 - - [ ] withdrawing, depositing, transferring from all accounts
 - - [ ] canceling accounts
 
-## JUnit
-- [ ]	100% test coverage for the service layer is expected using JUnit
+## JUnit4
+- [ ]	100% test coverage for the service layer is expected using JUnit4
 
 ## Log4J
 - [ ]	Logging should be accomplished using Log4J

@@ -70,6 +70,7 @@ public class User {
 		return true;
 	}
 
+	/* TODO: Use a StringBuilder for this, why overload String Pool? */
 	@Override
 	public String toString() {
 		return "User [bankID=" + bankID + ", name=" + name + "]";
