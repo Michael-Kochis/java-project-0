@@ -1,0 +1,1 @@
+2020-02-27 11:00:31 INFO  Driver:9 - Application started successfully.
