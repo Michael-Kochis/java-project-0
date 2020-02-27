@@ -60,4 +60,5 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 
 ## Dependency List
 * Java Runtime Environment, version 1.8.0 (release 241)
-* JUnit 5
+* JUnit 4
+* OJDBC8 version 19.3.0.0
