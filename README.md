@@ -56,3 +56,7 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 - - [ ] method for creating a new user in the database
 - [ ] Your database should include at least 1 stored procedure.
 - [ ] You should use the DAO design pattern for data connectivity.
+
+## Dependency List
+* Java Runtime Environment, version 1.8.0 (release 241)
+* JUnit 5
