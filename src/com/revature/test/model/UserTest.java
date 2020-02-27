@@ -1,4 +1,4 @@
-package com.revature.test;
+package com.revature.test.model;
 
 import static org.junit.Assert.*;
 

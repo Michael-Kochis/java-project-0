@@ -1,10 +1,10 @@
-package com.revature.test;
+package com.revature.test.model;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class BankIDTest {
+public class PHashTest {
 
 	@Test
 	public void test() {
