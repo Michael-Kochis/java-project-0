@@ -2,6 +2,7 @@ package com.revature.view.console;
 
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
+import java.util.Map;
 import java.util.TreeMap;
 
 import org.apache.log4j.Logger;
@@ -42,7 +43,19 @@ public class ConsoleMenu {
 	}
 	
 	public void add(char c, String s) {
+		int tLen = s.length() +5;
+		if (tLen > this.x) {
+			this.setWidth(tLen);
+		}
 		this.options.put(c, s);
+	}
+	
+	private void displayContents() {
+		for (Map.Entry<Character, String> entry : options.entrySet()) {
+			fillerLine();
+			int printSize = this.x;
+			System.out.printf("| " + fillerString(entry.getKey() + ": " + entry.getValue()) + " |\n");
+		}
 	}
 	
 	public void displayMenu() {
@@ -50,6 +63,7 @@ public class ConsoleMenu {
 		System.out.printf("/");
 		printHorizontalLine();
 		System.out.printf("\\\n");
+		displayContents();
 		fillerLine();
 		System.out.printf("\\");
 		printHorizontalLine();
@@ -60,6 +74,15 @@ public class ConsoleMenu {
 		for (int i = 1; i <= this.y; i++) {
 			System.out.printf(" ");
 		}
+	}
+	
+	private String fillerString(String s) {
+		StringBuilder os = new StringBuilder(s);
+		for (int i = s.length(); i < (this.x -2); i++) {
+			os.append(" ");
+		}
+		
+		return os.toString();
 	}
 	
 	private void printHorizontalLine() {

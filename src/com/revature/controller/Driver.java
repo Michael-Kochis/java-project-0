@@ -10,8 +10,7 @@ public class Driver {
 
 	public static void main(String[] args) {
 		//log.info("Application started successfully.");
-		con.setWidth(18);
-		con.displayMenu();		
+		con.displayMenu();	
 	}
 
 }
