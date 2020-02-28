@@ -48,11 +48,11 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 
 ## Log4J
 - [ ]	Logging should be accomplished using Log4J
-- - [ ] Logging will also be stored in JDBC/SQL (requirement SQL 1)
+- - [ ] Logging of transactions will also be stored in JDBC/SQL (requirement SQL 1)
 
 ## SQL Requirements
 - [ ] All information will be stored through JDBC/SQL
-- [ ] Create an SQL script that will create:
+- [ ] Create a SQL script that will create:
 - - [ ] table schema for storing all user and account information
 - - [ ] method for creating a new user in the database
 - [ ] Your database should include at least 1 stored procedure.
@@ -63,3 +63,4 @@ Leveraging Java 8, create an application that simulates simple banking transacti
 * JUnit4 version 4.13
 * Log4J version 1.2.17
 * OJDBC8 version 19.3.0.0
+* Spring-Security-Core version 5.2.2

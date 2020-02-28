@@ -1,7 +1,10 @@
 package com.revature.model;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 public class PHash {
-	private String salt;
 	private String pwHash;
 	
 	public PHash() {
@@ -11,37 +14,34 @@ public class PHash {
 	
 	public PHash(String s) {
 		this();
-		this.setHash(s);
+		this.setHash(s); 
 	}
 	
-	public PHash(String s, String h) {
-		this(s);
-		this.setHash(h);
-	}
-	
-	public void setHash(String s) {
+	/* Only for use when loading values from persistent storage. */
+	private void setHash(String s) {
 		this.pwHash = s;
 	}
 	
 	public boolean checkPassword(String s) {
-		return pwHash.equals(s);
+		return (passwordEncoder().matches(s, this.pwHash));
 	}
 	
-	public void setSalt(String s) {
-		this.salt = "";
-		this.salt.concat(s);
+	public void setPassword(String s) {
+		String bcrypt = null;
+		
+		bcrypt = passwordEncoder().encode(s);
+		setHash(bcrypt); 
 	}
 	
-	public String getSalt() {
-		return this.salt;
-	}
-
-	@Override
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+	    return new BCryptPasswordEncoder();
+	}	@Override
+	
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((pwHash == null) ? 0 : pwHash.hashCode());
-		result = prime * result + ((salt == null) ? 0 : salt.hashCode());
 		return result;
 	}
 
@@ -59,16 +59,11 @@ public class PHash {
 				return false;
 		} else if (!pwHash.equals(other.pwHash))
 			return false;
-		if (salt == null) {
-			if (other.salt != null)
-				return false;
-		} else if (!salt.equals(other.salt))
-			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "PHash [salt=" + salt + ", pwHash=" + pwHash + "]";
+		return "PHash [pwHash=" + pwHash + "]";
 	}
 }

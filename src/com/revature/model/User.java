@@ -35,7 +35,7 @@ public class User {
 		if ((this.password) == null) {
 			this.password = new PHash(s);
 		} else {
-		    this.password.setHash(s);
+		    this.password.setPassword(s);
 		}
 	}
 
