@@ -1,5 +1,10 @@
 package com.revature.model;
 
-public class Account {
+import com.revature.enums.AccountType;
 
+public class Account {
+	private long ownerUI;
+	private long accountNumber;
+	private double balance;
+	private AccountType type;
 }
