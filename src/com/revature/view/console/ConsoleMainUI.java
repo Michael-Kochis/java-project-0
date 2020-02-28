@@ -11,6 +11,10 @@ public class ConsoleMainUI {
 		init();
 	}
 	
+	public void setWidth(int nw) {
+		this.mainMenu.setWidth(nw);
+	}
+	
 	public void displayMenu() {
 		mainMenu.displayMenu();
 	}

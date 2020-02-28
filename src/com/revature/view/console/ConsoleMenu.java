@@ -15,7 +15,8 @@ public class ConsoleMenu {
 
 	public ConsoleMenu() {
 		super();
-		this.x = this.y = 0;
+		this.x = 0;
+		this.y = 39;
 	}
 	
 	public ConsoleMenu(TreeMap<Character, String> options) {
@@ -31,9 +32,13 @@ public class ConsoleMenu {
 		this.options = options;
 	}
 	
-	public void setSize(int nx, int ny) {
+	public void setWidth(int nx) {
+		if (nx > 78) { 
+			log.warn("Attempt to set menu width larger than screen.");
+			nx = 78; 
+		}
 		this.x = nx;
-		this.y = ny;
+		this.y = (80 - (nx+2))/2;
 	}
 	
 	public void add(char c, String s) {
@@ -41,8 +46,26 @@ public class ConsoleMenu {
 	}
 	
 	public void displayMenu() {
-		System.out.printf("/\\\n", 0x6c, 0x6b);
-		System.out.printf("\\/", 0x6d, 0x6a);
+		fillerLine();
+		System.out.printf("/");
+		printHorizontalLine();
+		System.out.printf("\\\n");
+		fillerLine();
+		System.out.printf("\\");
+		printHorizontalLine();
+		System.out.printf("/");
+	}
+	
+	private void fillerLine() {
+		for (int i = 1; i <= this.y; i++) {
+			System.out.printf(" ");
+		}
+	}
+	
+	private void printHorizontalLine() {
+		for (int i = 1; i <= this.x; i++) {
+			System.out.printf("-");
+		}
 	}
 
 	@Override
