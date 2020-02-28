@@ -20,6 +20,7 @@ public class ConsoleMainUI {
 	}
 
 	private void init() {
+		mainMenu.setTitle("Main Menu");
 		mainMenu.add('1', "Login as an existing user.");
 		mainMenu.add('2', "Register as a new user.");
 		mainMenu.add('Q', "Exit application.");

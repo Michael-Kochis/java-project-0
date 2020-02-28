@@ -13,11 +13,13 @@ public class ConsoleMenu {
 	private static Logger log = Logger.getLogger(ConsoleMenu.class);
 	private TreeMap<Character, String> options = new TreeMap<Character, String>();
 	private int x, y;
+	private String title;
 
 	public ConsoleMenu() {
 		super();
 		this.x = 0;
 		this.y = 39;
+		this.title = "";
 	}
 	
 	public ConsoleMenu(TreeMap<Character, String> options) {
@@ -27,6 +29,14 @@ public class ConsoleMenu {
 
 	public TreeMap<Character, String> getOptions() {
 		return options;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public void setOptions(TreeMap<Character, String> options) {
@@ -51,9 +61,12 @@ public class ConsoleMenu {
 	}
 	
 	private void displayContents() {
+		fillerLine();
+		System.out.printf("| " + fillerString(this.title) + " |\n");
+		fillerLine();
+		System.out.printf("| " + fillerString("") + " |\n");
 		for (Map.Entry<Character, String> entry : options.entrySet()) {
 			fillerLine();
-			int printSize = this.x;
 			System.out.printf("| " + fillerString(entry.getKey() + ": " + entry.getValue()) + " |\n");
 		}
 	}

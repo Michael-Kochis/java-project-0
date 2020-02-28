@@ -3,7 +3,8 @@
 ### Requirements
 
 **Description**
-Leveraging Java 8, create an application that simulates simple banking transactions
+Leveraging Java 8, create an application that simulates simple banking transactions.
+Maven is required to manage dependencies required by this project.
 
 ## Agile Requirements
 - [ ] Develop using the agile methodologies taught in class
