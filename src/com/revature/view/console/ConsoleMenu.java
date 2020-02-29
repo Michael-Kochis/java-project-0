@@ -60,9 +60,20 @@ public class ConsoleMenu {
 		this.options.put(c, s);
 	}
 	
+	private String centerString(String s) {
+		StringBuilder os = new StringBuilder(s);
+		
+		int i = os.length();
+		for (;(i+2) < (this.x); i+=2) {
+			os = os.append(" ").reverse().append(" ").reverse();
+			
+		}
+		return fillerString(os.toString());
+	}
+	
 	private void displayContents() {
 		fillerLine();
-		System.out.printf("| " + fillerString(this.title) + " |\n");
+		System.out.printf("| " + centerString(this.title) + " |\n");
 		fillerLine();
 		System.out.printf("| " + fillerString("") + " |\n");
 		for (Map.Entry<Character, String> entry : options.entrySet()) {
