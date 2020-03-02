@@ -31,7 +31,12 @@ Maven is required to manage dependencies required by this project.
 
 ## Bank Customer Functions
 - [ ] View and edit their personal information
-- [ ] View account information and balances, but not edit
+- [ ] View account information and balances, but not directly edit
+- [ ] Customer Banking Operations
+- - [ ]  Deposit
+- - [ ]  Withdraw
+- - [ ]  Transfer
+
 
 ## Bank Employee Functions
 - [ ]	Employees of the bank should be able to view all of their customers information.

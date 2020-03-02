@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 
 public class ConsoleMainUI {
 	private Logger log = Logger.getLogger(ConsoleMainUI.class);
-	private ConsoleMenu mainMenu = new ConsoleMenu();
+	private static ConsoleMenu mainMenu = new ConsoleMenu();
 
 	public ConsoleMainUI() {
 		super();
@@ -12,7 +12,7 @@ public class ConsoleMainUI {
 	}
 	
 	public void setWidth(int nw) {
-		this.mainMenu.setWidth(nw);
+		mainMenu.setWidth(nw);
 	}
 	
 	public void displayMenu() {
