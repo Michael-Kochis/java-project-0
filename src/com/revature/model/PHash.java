@@ -64,6 +64,6 @@ public class PHash {
 
 	@Override
 	public String toString() {
-		return "PHash [pwHash=" + pwHash + "]";
+		return "PHash [salt, pwHash= Nope, you don't ever get to see the salt or hash values.]";
 	}
 }
