@@ -12,7 +12,7 @@ public class CheckingAccount extends Account implements CheckingAccountable {
 
 	@Override
 	public boolean depositAuthUser(User u) {
-		// TODO Auto-generated method stub
+		// TODO: Auto-generated method stub
 		return false;
 	}
 
@@ -35,7 +35,7 @@ public class CheckingAccount extends Account implements CheckingAccountable {
 	}
 
 	@Override
-	public boolean transferAuthUser(User u, Account a) {
+	public boolean transferAuthUser(User u, Account other) {
 		// TODO Auto-generated method stub
 		return false;
 	}
