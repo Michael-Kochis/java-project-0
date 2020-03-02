@@ -10,4 +10,6 @@ public interface Accountable {
 	public boolean withdrawAuthUID(long uid);
 	public boolean transferAuthUser(User u, Account a);
 	public boolean transferAuthUID(long uUid, long aUid);
+	public boolean viewAuthUser(User u);
+	public boolean viewAuthUID(long uid);
 }

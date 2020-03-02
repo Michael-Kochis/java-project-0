@@ -62,6 +62,7 @@ Maven is required to manage dependencies required by this project.
 - - [ ] table schema for storing all user and account information
 - - [ ] method for creating a new user in the database
 - [ ] Your database should include at least 1 stored procedure.
+- - [ ] Procedure to make sure both halves of a transfer happen, or none.
 - [ ] You should use the DAO design pattern for data connectivity.
 
 ## Dependency List
