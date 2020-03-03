@@ -12,6 +12,7 @@ public class PHash {
 		this.pwHash = new String();
 	}
 	
+	/** Only for use when loading values from persistent storage */
 	public PHash(String s) {
 		this();
 		this.setHash(s); 
@@ -22,10 +23,17 @@ public class PHash {
 		this.pwHash = s;
 	}
 	
+	/** For security reasons, there is no getPwHash method.
+	 * The checkPassword function takes an unencrypted string
+	 * and returns true if that string matches the encrypted
+	 * password.  Otherwise, this method returns false. */
 	public boolean checkPassword(String s) {
 		return (passwordEncoder().matches(s, this.pwHash));
 	}
 	
+	/** Function setPassword takes a raw string, generates a
+	 * random salt, and encodes the string into pwHash.  This value
+	 * should never be accessible by the user. */
 	public void setPassword(String s) {
 		String bcrypt = null;
 		
@@ -33,11 +41,16 @@ public class PHash {
 		setHash(bcrypt); 
 	}
 	
+	/** Function passwordEncoder returns a new BCryptPasswordEncoder,
+	 * which contains methods useful for encrypting our password. */
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 	    return new BCryptPasswordEncoder();
 	}	@Override
 	
+	/** Hashing our pwHash field should obscure the value enough to 
+	 * ensure that this required functionality does not overly compromise
+	 * the security of our pwHash field. */
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -45,6 +58,8 @@ public class PHash {
 		return result;
 	}
 
+	/** Because the pwHash values are never disclosed to the user, this code
+	 * should be safe. */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -62,6 +77,8 @@ public class PHash {
 		return true;
 	}
 
+	/** Function toString returns a snarky string letting the end user
+	 * know not to attempt to bypass our security. */
 	@Override
 	public String toString() {
 		return "PHash [salt, pwHash= Nope, you don't ever get to see the salt or hash values.]";
