@@ -3,11 +3,11 @@ package com.revature.model;
 public class Permission {
 	String permission; // TODO: make this an enum, transition into/from database
 	
-	Permission() {
+	public Permission() {
 		super();
 	}
 	
-	Permission(String s) {
+	public Permission(String s) {
 		this();
 		this.setPermission(s);
 	}
