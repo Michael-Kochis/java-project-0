@@ -7,19 +7,19 @@ public class ConsoleScanner {
     
     ConsoleScanner() {
     	super();
-    	s = getScanner();
+    	ConsoleScanner.s = getScanner();
     }
     
-    public Scanner getScanner() {
+    public static Scanner getScanner() {
     	if (s == null) {
-    		s = new Scanner(System.in);
+    		ConsoleScanner.s = new Scanner(System.in);
     	}
     	
     	return s;
     }
     
-    public void setScanner(Scanner scan) {
-    	s = getScanner();
+    public static void setScanner(Scanner scan) {
+    	ConsoleScanner.s = getScanner();
     }
 
 	@Override

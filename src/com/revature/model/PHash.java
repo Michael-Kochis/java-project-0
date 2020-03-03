@@ -17,7 +17,7 @@ public class PHash {
 		this.setHash(s); 
 	}
 	
-	/* Only for use when loading values from persistent storage. */
+	/** Only for use when loading values from persistent storage. */
 	private void setHash(String s) {
 		this.pwHash = s;
 	}
