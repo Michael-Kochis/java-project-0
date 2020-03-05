@@ -22,14 +22,35 @@ public class AccountDAO implements AccountDAOInterface {
 
 	@Override
 	public void createAccount(Account a) {
-		// TODO Auto-generated method stub
-		
+	      try {
+	  	    Connection testConn = JDBCConnector.getConn();
+	  	    PreparedStatement st = testConn.prepareStatement("INSERT INTO BANKACCOUNT VALUES (?, ?, ?)");
+	  	    st.setLong(1, a.getAccountNumber());
+	  	    st.setInt(2, AccountType.typeToInt(a.getType()));
+	  	    st.setDouble(3, a.getBalance());
+	  	    st.execute();
+	  	    log.trace("Single record successfully inserted into Accounts table.");
+		  } catch (SQLException e){
+			log.warn("Error while inserting into Accounts table in database", e);
+		  }
 	}
 
 	@Override
 	public void deleteAccount(Account a) {
-		// TODO Auto-generated method stub
-		
+	  deleteAccountByUID(a.getAccountNumber());
+	}
+
+	@Override
+	public void deleteAccountByUID(long uid) {
+	      try {
+	  	    Connection testConn = JDBCConnector.getConn();
+	  	    PreparedStatement st = testConn.prepareStatement("DELETE FROM BANKACCOUNT WHERE BANKUID = ?");
+	  	    st.setLong(1, uid);
+	  	    st.execute();
+	  	    log.trace("Record successfully deleted from Accounts table in database");
+		  } catch (SQLException e){
+			 	log.warn("Error while removing from Accounts table in database", e);
+		  }      
 	}
 
 	@Override
@@ -143,4 +164,5 @@ public class AccountDAO implements AccountDAOInterface {
 	public String toString() {
 		return "AccountDAO [AccountDAO has no data fields to enter.]";
 	}
+
 }
