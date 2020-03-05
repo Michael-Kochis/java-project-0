@@ -20,4 +20,11 @@
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>19.3.0.0</name>
+			<type>2</type>
+			<location>C:/Users/18326/.m2/repository/com/oracle/ojdbc/ojdbc8/19.3.0.0</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -6,6 +6,11 @@
 Leveraging Java 8, create an application that simulates simple banking transactions.
 Maven is required to manage dependencies required by this project.
 
+**Required Environment Variables**
+- JavaBank_URL: the JDBC connection string used to connect to the database.
+- JavaBank_Login: the user name to connect to the database with
+- JavaBank_Password: the password to use for the login (above)
+
 ## Agile Requirements
 - [ ] Develop using the agile methodologies taught in class
 - - [ ] You should be using TDD (see JUnit4 requirements)
