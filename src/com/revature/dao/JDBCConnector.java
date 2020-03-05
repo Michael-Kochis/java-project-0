@@ -5,9 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import oracle.jdbc.driver.OracleDriver;
+
+import org.apache.log4j.Logger;
 
 public class JDBCConnector {
+	private static Logger log = Logger.getLogger(JDBCConnector.class);
 	private static Connection conn;
 	private static String url, root, passwd;
 	
@@ -24,16 +26,19 @@ public class JDBCConnector {
 	}
 	
 	private static void setConn() {
+		JDBCConnector.init();
+		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 			conn = DriverManager.getConnection(url, root, passwd);
+			log.trace("New connection to database established.");
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.fatal("Error accessing database\n", e);
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void testDatabase() {
 		try {
 			JDBCConnector.init();
 			Connection testConn = getConn();
@@ -41,11 +46,11 @@ public class JDBCConnector {
 			ResultSet rs = st.executeQuery();
 			
 			if (rs.next()) {
-				System.out.println(rs.getString("YIPYIP"));
+				log.trace("Database connection established and tested");
 			}
 			rs.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			log.warn("Trial connection to database failed.", e);
 		} 
 	}
 	
@@ -53,7 +58,5 @@ public class JDBCConnector {
 		url = System.getenv("JavaBank_URL");
 		root = System.getenv("JavaBank_Login");
 		passwd = System.getenv("JavaBank_Password");
-		
-		conn = getConn();
 	}
 }

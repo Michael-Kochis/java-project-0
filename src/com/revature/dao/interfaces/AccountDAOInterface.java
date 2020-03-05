@@ -9,7 +9,6 @@ public interface AccountDAOInterface {
 	public void deleteAccount(Account a);
 	public TreeSet<Account> readAllAccounts();
 	public Account readAccount(Account a);
-	public TreeSet<Account> readAccountsbyOwnerUID(long uid);
 	public Account readAccountByUID(long uid);
 	public void updateAccount(Account a);
 }

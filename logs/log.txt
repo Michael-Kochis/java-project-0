@@ -1,1 +1,40 @@
 2020-02-27 11:00:31 INFO  Driver:9 - Application started successfully.
+2020-03-05 08:51:31 INFO  Driver:16 - Application started successfully.
+2020-03-05 08:54:53 INFO  Driver:16 - Application started successfully.
+2020-03-05 08:54:53 FATAL JDBCConnector:35 - Error accessing database
+
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.dao.JDBCConnector.setConn(JDBCConnector.java:32)
+	at com.revature.dao.JDBCConnector.getConn(JDBCConnector.java:23)
+	at com.revature.dao.AccountDAO.readAccountByUID(AccountDAO.java:70)
+	at com.revature.controller.Driver.main(Driver.java:17)
+2020-03-05 08:56:42 INFO  Driver:16 - Application started successfully.
+2020-03-05 08:57:01 INFO  Driver:16 - Application started successfully.
+2020-03-05 08:57:02 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 08:57:03 TRACE AccountDAO:94 - Single record returned from Accounts table.
+2020-03-05 08:59:09 INFO  Driver:16 - Application started successfully.
+2020-03-05 08:59:11 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 08:59:11 INFO  AccountDAO:91 - Attempt to retreive record from Accounts table failed
+2020-03-05 08:59:27 INFO  Driver:16 - Application started successfully.
+2020-03-05 08:59:28 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 08:59:29 WARN  AccountDAO:94 - Error while accessing Accounts table in database
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setLongInternal(OraclePreparedStatement.java:4579)
+	at oracle.jdbc.driver.OraclePreparedStatement.setLong(OraclePreparedStatement.java:4570)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setLong(OraclePreparedStatementWrapper.java:203)
+	at com.revature.dao.AccountDAO.readAccountByUID(AccountDAO.java:76)
+	at com.revature.controller.Driver.main(Driver.java:17)
+2020-03-05 08:59:59 INFO  Driver:16 - Application started successfully.
+2020-03-05 09:00:00 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 09:00:01 WARN  AccountDAO:94 - Error while accessing Accounts table in database
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setLongInternal(OraclePreparedStatement.java:4579)
+	at oracle.jdbc.driver.OraclePreparedStatement.setLong(OraclePreparedStatement.java:4570)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setLong(OraclePreparedStatementWrapper.java:203)
+	at com.revature.dao.AccountDAO.readAccountByUID(AccountDAO.java:76)
+	at com.revature.controller.Driver.main(Driver.java:17)
+2020-03-05 09:18:28 INFO  Driver:16 - Application started successfully.
+2020-03-05 09:18:29 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 09:18:29 TRACE AccountDAO:88 - Single record returned from Accounts table.

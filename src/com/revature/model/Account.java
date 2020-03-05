@@ -3,7 +3,6 @@ package com.revature.model;
 import com.revature.enums.AccountType;
 
 public class Account {
-	private long ownerUI;
 	private long accountNumber;
 	private AccountType type;
 	private double balance;
@@ -12,20 +11,11 @@ public class Account {
 		super();
 	}
 	
-	public Account(long ownerUI, long accountNumber, AccountType type, double balance) {
+	public Account(long accountNumber, AccountType type, double balance) {
 		this();
-		this.setOwnerUI(ownerUI);
 		this.setAccountNumber(accountNumber);
 		this.setType(type);
 		this.setBalance(balance);
-	}
-
-	public long getOwnerUI() {
-		return ownerUI;
-	}
-
-	public void setOwnerUI(long ownerUI) {
-		this.ownerUI = ownerUI;
 	}
 
 	public long getAccountNumber() {
@@ -60,7 +50,6 @@ public class Account {
 		long temp;
 		temp = Double.doubleToLongBits(balance);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + (int) (ownerUI ^ (ownerUI >>> 32));
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
@@ -78,8 +67,6 @@ public class Account {
 			return false;
 		if (Double.doubleToLongBits(balance) != Double.doubleToLongBits(other.balance))
 			return false;
-		if (ownerUI != other.ownerUI)
-			return false;
 		if (type != other.type)
 			return false;
 		return true;
@@ -87,7 +74,7 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [ownerUI=" + ownerUI + ", accountNumber=" + accountNumber + ", type=" + type + ", balance="
+		return "Account [accountNumber=" + accountNumber + ", type=" + type + ", balance="
 				+ balance + "]";
 	}
 }
