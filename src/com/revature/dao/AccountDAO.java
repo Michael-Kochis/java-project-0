@@ -121,8 +121,17 @@ public class AccountDAO implements AccountDAOInterface {
 
 	@Override
 	public void updateAccount(Account a) {
-		// TODO Auto-generated method stub
-		
+	      try {
+		  	    Connection testConn = JDBCConnector.getConn();
+		  	    PreparedStatement st = testConn.prepareStatement("UPDATE BANKACCOUNT SET accttype = ?, amount = ? WHERE BANKUID = ?");
+		  	    st.setInt(1, AccountType.typeToInt(a.getType()));
+		  	    st.setDouble(2, a.getBalance());
+		  	    st.setLong(3, a.getAccountNumber());
+		  	    st.execute();
+		  	    log.trace("Record successfully updated in Accounts table in database");
+			  } catch (SQLException e){
+				 	log.warn("Error while updating Accounts table in database", e);
+			  }      
 	}
 
 	@Override

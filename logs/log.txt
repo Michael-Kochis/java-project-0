@@ -1,36 +1,16 @@
-2020-03-05 12:40:16 INFO  Driver:18 - Application started successfully.
-2020-03-05 12:40:18 TRACE JDBCConnector:35 - New connection to database established.
-2020-03-05 12:43:26 INFO  Driver:18 - Application started successfully.
-2020-03-05 12:43:27 TRACE JDBCConnector:35 - New connection to database established.
-2020-03-05 12:43:28 TRACE AccountDAO:138 - 2 records returned from Accounts table.
-2020-03-05 12:57:57 INFO  Driver:19 - Application started successfully.
-2020-03-05 12:57:58 TRACE JDBCConnector:35 - New connection to database established.
-2020-03-05 12:57:58 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
-2020-03-05 13:03:24 INFO  Driver:19 - Application started successfully.
-2020-03-05 13:03:25 TRACE JDBCConnector:35 - New connection to database established.
-2020-03-05 13:03:25 WARN  AccountDAO:52 - Error while removing from Accounts table in database
-java.sql.SQLSyntaxErrorException: ORA-00900: invalid SQL statement
+2020-03-05 13:37:04 INFO  Driver:20 - Application started successfully.
+2020-03-05 13:37:06 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 13:37:06 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
+2020-03-05 13:37:06 TRACE AccountDAO:131 - Record successfully updated in Accounts table in database
+2020-03-05 13:37:06 TRACE AccountDAO:50 - Record successfully deleted from Accounts table in database
+2020-03-05 13:37:06 TRACE Driver:26 - Application ending successfully.
 
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
-	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
-	at com.revature.dao.AccountDAO.deleteAccountByUID(AccountDAO.java:49)
-	at com.revature.controller.Driver.main(Driver.java:20)
-Caused by: Error : 900, Position : 0, Sql = REMOVE FROM BANKACCOUNT WHERE BANKUID = :1 , OriginalSql = REMOVE FROM BANKACCOUNT WHERE BANKUID = ?, Error Msg = ORA-00900: invalid SQL statement
 
-	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
-	... 15 more
-2020-03-05 13:04:00 INFO  Driver:19 - Application started successfully.
-2020-03-05 13:04:02 TRACE JDBCConnector:35 - New connection to database established.
-2020-03-05 13:04:02 TRACE AccountDAO:50 - Record successfully deleted from Accounts table in database
+2020-03-05 13:37:08 INFO  Driver:20 - Application started successfully.
+2020-03-05 13:37:09 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-05 13:37:09 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
+2020-03-05 13:37:09 TRACE AccountDAO:131 - Record successfully updated in Accounts table in database
+2020-03-05 13:37:09 TRACE AccountDAO:50 - Record successfully deleted from Accounts table in database
+2020-03-05 13:37:09 TRACE Driver:26 - Application ending successfully.
+
+
