@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import com.revature.dao.interfaces.AccountDAOInterface;
 import com.revature.enums.AccountType;
 import com.revature.model.Account;
+import com.revature.model.User;
 
 public class AccountDAO implements AccountDAOInterface {
 	private static Logger log = Logger.getLogger(AccountDAO.class);
@@ -103,4 +104,43 @@ public class AccountDAO implements AccountDAOInterface {
 		
 	}
 
+	@Override
+	public TreeSet<Account> readAllByUser(User u) {
+		return readAllByUserUID(u.getBankID());
+	}
+
+	@Override
+	public TreeSet<Account> readAllByUserUID(Long uid) {
+		  TreeSet<Account> returnThis = new TreeSet<Account>();
+		  
+	      try {
+		    Connection testConn = JDBCConnector.getConn();
+		    PreparedStatement st = testConn.prepareStatement("SELECT * FROM BANKACCOUNT a INNER JOIN USER_ACCOUNT ua ON ua.acctuid = ?");
+		    st.setLong(1, uid);
+		    ResultSet rs = st.executeQuery();
+		    
+	    	long auid;
+	    	AccountType type;
+	    	double balance;
+	    	
+	    	while (rs.next()) {
+		    	auid = rs.getLong("BANKUID");
+		    	type = AccountType.intToType(rs.getInt("ACCTTYPE"));
+		    	balance = rs.getDouble("amount");
+		    	
+			    Account temp = new Account(auid, type, balance);
+		    	returnThis.add(temp);
+		    } 
+		  } catch (SQLException e){
+		 	log.warn("Error while accessing Accounts table in database", e);
+	  	  }
+	      
+	      log.trace(returnThis.size() + " records returned from Accounts table.");
+		  return returnThis;
+	}
+
+	@Override
+	public String toString() {
+		return "AccountDAO [AccountDAO has no data fields to enter.]";
+	}
 }

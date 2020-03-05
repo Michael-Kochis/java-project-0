@@ -69,6 +69,7 @@ Maven is required to manage dependencies required by this project.
 - [ ] Your database should include at least 1 stored procedure.
 - - [ ] Procedure to make sure both halves of a transfer happen, or none.
 - [ ] You should use the DAO design pattern for data connectivity.
+- [ ] (Optional) Have a full ERD showing the relationships and cardinality of your data tables.
 
 ## Dependency List
 * Java Runtime Environment, version 1.8.0 (release 241)

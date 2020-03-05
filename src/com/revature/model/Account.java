@@ -2,7 +2,7 @@ package com.revature.model;
 
 import com.revature.enums.AccountType;
 
-public class Account {
+public class Account implements Comparable {
 	private long accountNumber;
 	private AccountType type;
 	private double balance;
@@ -43,6 +43,11 @@ public class Account {
 	}
 
 	@Override
+	public int compareTo(Object other) {
+		return Long.compare(this.accountNumber, ((Account)other).getAccountNumber());
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -77,6 +82,7 @@ public class Account {
 		return "Account [accountNumber=" + accountNumber + ", type=" + type + ", balance="
 				+ balance + "]";
 	}
+
 }
 
 

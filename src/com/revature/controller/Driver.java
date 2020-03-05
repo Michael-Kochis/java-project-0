@@ -1,5 +1,7 @@
 package com.revature.controller;
 
+import java.util.TreeSet;
+
 import org.apache.log4j.Logger;
 
 import com.revature.dao.AccountDAO;
@@ -14,7 +16,7 @@ public class Driver {
 		AccountDAO ad = new AccountDAO();
 		
 		log.info("Application started successfully.");
-		Account a = ad.readAccountByUID(0L);
+		TreeSet<Account> a = ad.readAllByUserUID(0L);
 		System.out.println(a.toString());
 		con.displayMenu();	
 	}
