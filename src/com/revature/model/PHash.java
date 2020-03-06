@@ -18,6 +18,11 @@ public class PHash {
 		this.setHash(s); 
 	}
 	
+	/** Only for saving values to persistent storage. */
+	public String getHash() {
+		return pwHash;
+	}
+	
 	/** Only for use when loading values from persistent storage. */
 	private void setHash(String s) {
 		this.pwHash = s;

@@ -20,3 +20,7 @@
 2020-03-06 08:53:46 TRACE Driver:25 - Application ending successfully.
 
 
+2020-03-06 10:39:15 INFO  Driver:24 - Application started successfully.
+2020-03-06 10:39:15 TRACE Driver:29 - Application ending successfully.
+
+
