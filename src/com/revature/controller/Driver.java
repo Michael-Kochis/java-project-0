@@ -17,13 +17,10 @@ public class Driver {
 	public static void main(String[] args) {
 		//PermissionsDAO pd = new PermissionsDAO();
 		//Permission p = new Permission(PermissionType.PERM_ADM);
-		PHash ph = new PHash();
-		ph.setPassword("IBdaBank");
 		
 		
 		log.info("Application started successfully.");
 		//pd.createUserPermission(0L, p);
-		System.out.println();
 		
 		//con.displayMenu();
 		log.trace("Application ending successfully.\n\n");

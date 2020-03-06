@@ -7,6 +7,7 @@ import com.revature.model.User;
 public interface UserDAOInterface {
 	public void createUser(User u);
 	public void deleteUser(User u);
+	public void deleteUserByUID(long uid);
 	public TreeSet<User> readAllUsers();
 	public User readUser(User u);
 	public User readUserByUID(long uid);

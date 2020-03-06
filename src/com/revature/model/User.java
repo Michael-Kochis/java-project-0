@@ -14,6 +14,12 @@ public class User {
 		this();
 		this.setName(name);
 	}
+	
+	public User(long uid, String nName, PHash passwd) {
+		this(nName);
+		this.bankID = uid;
+		this.password = passwd;
+	}
 
 	public long getBankID() {
 		return this.bankID;
@@ -29,6 +35,11 @@ public class User {
 	
 	public boolean checkPassword(String s) {
 		return this.password.checkPassword(s);
+	}
+	
+	/** Hatred for this method, exists only due to persistence. */
+	public PHash getHash() {
+		return this.password;
 	}
 
 	public void setPassword(String s) {

@@ -65,8 +65,8 @@ Maven is required to manage dependencies required by this project.
 - [ ] All information will be stored through JDBC/SQL
 - [ ] Create a SQL script that will create:
 - - [ ] table schema for storing all user and account information
-- - [ ] method for creating a new user in the database
-- [ ] Your database should include at least 1 stored procedure.
+- - [x] method for creating a new user in the database
+- [x] Your database should include at least 1 stored procedure.
 - - [ ] Procedure to make sure both halves of a transfer happen, or none.
 - [ ] You should use the DAO design pattern for data connectivity.
 - [ ] (Optional) Have a full ERD showing the relationships and cardinality of your data tables.
