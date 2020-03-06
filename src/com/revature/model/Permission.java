@@ -1,22 +1,24 @@
 package com.revature.model;
 
+import com.revature.enums.PermissionType;
+
 public class Permission {
-	String permission; // TODO: make this an enum, transition into/from database
+	private PermissionType permission;
 	
 	public Permission() {
 		super();
 	}
 	
-	public Permission(String s) {
+	public Permission(PermissionType p) {
 		this();
-		this.setPermission(s);
+		this.setPermission(p);
 	}
 
-	public String getPermission() {
+	public PermissionType getPermission() {
 		return permission;
 	}
 
-	public void setPermission(String permission) {
+	public void setPermission(PermissionType permission) {
 		this.permission = permission;
 	}
 
@@ -40,8 +42,9 @@ public class Permission {
 		if (permission == null) {
 			if (other.permission != null)
 				return false;
-		} else if (!permission.equals(other.permission))
+		} else if (!this.permission.equals(other.permission)) {
 			return false;
+		}
 		return true;
 	}
 

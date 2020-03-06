@@ -2,14 +2,15 @@ package com.revature.dao.interfaces;
 
 import java.util.TreeSet;
 
+import com.revature.enums.PermissionType;
 import com.revature.model.Permission;
 
 public interface PermissionsDAOInterface {
 	public void createPermission(Permission p);
+	public void createUserPermission(long uid, Permission p);
 	public void deletePermission(Permission p);
 	public TreeSet<Permission> readAllPermissions();
-	public Permission readPermission(Permission p);
-	public Permission readPermissionByName(String s);
-	public TreeSet<Permission> readAccountsbyOwnerUID(long uid);
+	public Permission readPermissionByType(PermissionType pt);
+	public TreeSet<Permission> readPermissionsByOwnerUID(long uid);
 	public void updatePermission(Permission p);
 }

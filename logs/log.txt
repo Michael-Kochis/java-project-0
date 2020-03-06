@@ -14,3 +14,9 @@
 2020-03-05 13:37:09 TRACE Driver:26 - Application ending successfully.
 
 
+2020-03-06 08:53:44 INFO  Driver:21 - Application started successfully.
+2020-03-06 08:53:45 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-06 08:53:46 TRACE AccountDAO:41 - Single record successfully inserted into User_Permission table.
+2020-03-06 08:53:46 TRACE Driver:25 - Application ending successfully.
+
+

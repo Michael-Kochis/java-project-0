@@ -4,9 +4,9 @@ import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 
-import com.revature.dao.AccountDAO;
-import com.revature.enums.AccountType;
-import com.revature.model.Account;
+import com.revature.dao.PermissionsDAO;
+import com.revature.enums.PermissionType;
+import com.revature.model.Permission;
 import com.revature.view.console.ConsoleMainUI;
 
 public class Driver {
@@ -14,14 +14,13 @@ public class Driver {
 	private static ConsoleMainUI con = new ConsoleMainUI();
 
 	public static void main(String[] args) {
-		AccountDAO ad = new AccountDAO();
-		Account a = new Account(2, AccountType.intToType(2), 0.0d);
+		PermissionsDAO pd = new PermissionsDAO();
+		Permission p = new Permission(PermissionType.PERM_ADM);
+		
 		
 		log.info("Application started successfully.");
-		ad.createAccount(a);
-		a.setBalance(50.0d);
-		ad.updateAccount(a);
-		ad.deleteAccountByUID(2);
+		pd.createUserPermission(0L, p);
+		
 		//con.displayMenu();
 		log.trace("Application ending successfully.\n\n");
 	}
