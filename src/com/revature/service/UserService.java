@@ -7,7 +7,7 @@ import com.revature.model.User;
 
 public class UserService {
 	private static Logger log = Logger.getLogger(UserService.class);
-	private UserDAO ud;
+	private static UserDAO ud;
 	
 	public UserService() {
 		super();
@@ -31,6 +31,12 @@ public class UserService {
 		return ud.existByName(name);
 	}
 	
+	public static long getMax() {
+		if (ud == null)
+			ud = new UserDAO();
+		return ud.getMax();
+	}
+
 	public void registerUser(User u) {
 		if (ud.exist(u)) {
 			log.info("Attept to insert existing user into database: " + u.toString());

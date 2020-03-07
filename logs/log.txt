@@ -90,3 +90,25 @@
 2020-03-07 10:27:21 INFO  UserDAO:135 - Attempt to retreive record from Accounts table failed
 2020-03-07 10:27:21 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
 2020-03-07 10:27:21 INFO  UserDAO:167 - Attempt to retreive record from Accounts table failed
+2020-03-07 17:50:02 INFO  Driver:19 - Application started successfully.
+2020-03-07 17:50:15 TRACE Driver:23 - Application ending successfully.
+
+
+2020-03-07 18:02:21 INFO  Driver:19 - Application started successfully.
+2020-03-07 18:04:57 INFO  Driver:19 - Application started successfully.
+2020-03-07 18:07:11 INFO  Driver:19 - Application started successfully.
+2020-03-07 18:07:14 TRACE MainMenuController:26 - Request from user to exit.
+2020-03-07 18:07:49 INFO  Driver:12 - Application started successfully.
+2020-03-07 18:08:02 TRACE MainMenuController:30 - Request from user to Register
+2020-03-07 18:08:12 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-07 18:08:13 INFO  UserDAO:167 - Attempt to retreive record from Accounts table failed
+2020-03-07 18:09:23 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 18:09:23 INFO  UserService:36 - Attept to insert existing user into database: User [bankID=1, name=Highborn]
+2020-03-07 18:18:56 TRACE MainMenuController:26 - Request from user to exit.
+2020-03-07 18:26:18 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-07 18:26:18 INFO  Driver:15 - Application started successfully.
+2020-03-07 18:26:22 TRACE MainMenuController:30 - Request from user to Register
+2020-03-07 18:26:26 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
+2020-03-07 18:26:39 INFO  UserDAO:166 - Attempt to retreive record from BankUser table failed
+2020-03-07 18:26:39 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-07 18:27:45 TRACE MainMenuController:26 - Request from user to exit.

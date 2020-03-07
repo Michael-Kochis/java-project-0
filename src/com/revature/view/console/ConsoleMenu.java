@@ -92,6 +92,7 @@ public class ConsoleMenu {
 		System.out.printf("\\");
 		printHorizontalLine();
 		System.out.printf("/");
+		System.out.println();
 	}
 	
 	private void fillerLine() {

@@ -25,8 +25,8 @@ public class UserRegister {
 			if (us.existByName(uname)) {
 				log.trace("Attempt to duplicate username " + uname);
 				uname = null;
+				System.out.println("Username " + uname + " is taken, please enter a different username.");
 			}
-			System.out.println("Username " + uname + " is taken, please enter a different username.");
 		}
 		System.out.println(uname + " is available, please set your password.");
 		pword = scan.nextLine();
@@ -40,7 +40,7 @@ public class UserRegister {
 			System.out.println("Please enter that password again to confirm.");
 			confirm = scan.nextLine();
 		}
-		PHash ph = new PHash(pword);
+		PHash ph = new PHash();  ph.setPassword(pword);
 		User newUser = new User(BankID.getNextBankID(), uname, ph);
 		us.registerUser(newUser);
 	}

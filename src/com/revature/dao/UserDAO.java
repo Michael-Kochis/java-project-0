@@ -73,6 +73,37 @@ public class UserDAO implements UserDAOInterface {
 		}
 	}
 
+	public long getMax() {
+		long tempMax = 0;
+		try {
+			Connection testConn = JDBCConnector.getConn();
+			PreparedStatement st = testConn.prepareStatement("SELECT MAX(BANKUID) FROM BANKUSER");
+			ResultSet rs = st.executeQuery();
+			if (rs.next()) {
+				tempMax = rs.getLong(1);
+			}
+			st.close();
+			
+			st = testConn.prepareStatement("SELECT MAX(BANKUID) FROM BANKACCOUNT");
+		    rs = st.executeQuery();
+			if (rs.next()) {
+				tempMax = Math.max(rs.getLong(1), tempMax);
+			}
+			st.close();
+			
+			st = testConn.prepareStatement("SELECT MAX(TRANSUID) FROM BANKTRANS");
+		    rs = st.executeQuery();
+			if (rs.next()) {
+				tempMax = Math.max(rs.getLong(1), tempMax);
+			}
+			st.close();
+		} catch (SQLException e){
+		 	log.warn("Error while accessing BankUser table in database", e);
+	  	}
+	      
+		return tempMax;
+	}
+
 	@Override
 	public TreeSet<User> readAllUsers() {
 		  TreeSet<User> returnThis = new TreeSet<User>();
@@ -97,7 +128,7 @@ public class UserDAO implements UserDAOInterface {
 		    	returnThis.add(neoUser);
 		    }
 		  } catch (SQLException e){
-		 	log.warn("Error while accessing Accounts table in database", e);
+		 	log.warn("Error while accessing BankUser table in database", e);
 	  	  }
 	      
 	      log.trace(returnThis.size() + " records returned from Accounts table.");
@@ -129,13 +160,13 @@ public class UserDAO implements UserDAOInterface {
 		    	tHash = rs.getString("PASSWD");
 		    	PHash nPHash = new PHash(tHash);
 		    	
-			    log.trace( "Single record returned from Accounts table.");
+			    log.trace( "Single record returned from BankUser table.");
 		    	returnThis = new User(nUID, nName, nPHash);
 		    } else {
-		    	log.info("Attempt to retreive record from Accounts table failed");
+		    	log.info("Attempt to retreive record from BankUser table failed");
 		    }
 		  } catch (SQLException e){
-		 	log.warn("Error while accessing Accounts table in database", e);
+		 	log.warn("Error while accessing BankUser table in database", e);
 	  	  }
 	      
 		  return returnThis;
@@ -161,13 +192,13 @@ public class UserDAO implements UserDAOInterface {
 		    	tHash = rs.getString("PASSWD");
 		    	PHash nPHash = new PHash(tHash);
 		    	
-			    log.trace( "Single record returned from Accounts table.");
+			    log.trace( "Single record returned from BankUser table.");
 		    	returnThis = new User(nUID, nName, nPHash);
 		    } else {
-		    	log.info("Attempt to retreive record from Accounts table failed");
+		    	log.info("Attempt to retreive record from BankUser table failed");
 		    }
 		  } catch (SQLException e){
-		 	log.warn("Error while accessing Accounts table in database", e);
+		 	log.warn("Error while accessing BankUser table in database", e);
 	  	  }
 	      
 		  return returnThis;
