@@ -55,29 +55,38 @@ DROP TABLE BANKACCOUNT CASCADE CONSTRAINTS;
 CREATE TABLE BANKACCOUNT 
    (	"BANKUID" NUMBER PRIMARY KEY, 
 	"ACCTTYPE" NUMBER DEFAULT 0, 
-	"AMOUNT" NUMBER CHECK (AMOUNT >= 0.0),
+	"AMOUNT" NUMBER CHECK (AMOUNT >= 0),
 	FOREIGN KEY ("ACCTTYPE")
 	  REFERENCES BANKACCOUNTTYPE (BANKUID)
 	);
 INSERT INTO BANKACCOUNT VALUES (0, 1, 250);	
+INSERT INTO BANKACCOUNT VALUES (1, 0, 50);	
 	
 CREATE OR REPLACE PROCEDURE xfer_funds(
     source_acct IN NUMBER, dest_acct IN NUMBER, t_amount IN NUMBER
 )	
 IS
   source_bal NUMBER;
-  target_bal NUMBER;
+  dest_bal NUMBER;
 BEGIN
-  SELECT (amount - tamount) INTO source_bal FROM BANKACCOUNT WHERE bankuid = source_acct;
+  --DBMS_OUTPUT.ENABLE;
+  --DBMS_OUTPUT.PUT_LINE('We exist.');
+  SELECT (ba.amount) INTO source_bal FROM BANKACCOUNT ba WHERE ba.bankuid = source_acct;
+  source_bal := source_bal - t_amount;
+  --DBMS_OUTPUT.PUT_LINE(1 || ' ' ||source_bal || ' ' || dest_bal);
   UPDATE BANKACCOUNT SET AMOUNT = source_bal WHERE BANKUID = source_acct;
-  SELECT (amount + tamount) INTO target_bal FROM BANKACCOUNT WHERE bankuid = dest_acct;
-  UPDATE BANKACCOUNT SET AMOUNT = target_bal WHERE BANKUID = dest_acct;
+  --DBMS_OUTPUT.PUT_LINE(source_bal || ' ' || dest_bal);
+  SELECT (ba.amount) INTO dest_bal FROM BANKACCOUNT ba WHERE ba.bankuid = dest_acct;
+  dest_bal := dest_bal + t_amount;
+  --DBMS_OUTPUT.PUT_LINE(source_bal || ' ' || dest_bal);
+  UPDATE BANKACCOUNT SET AMOUNT = dest_bal WHERE BANKUID = dest_acct;
   COMMIT;
+  --DBMS_OUTPUT.PUT_LINE(source_bal || ' ' || dest_bal);
 END;
 /
 
 BEGIN 
-  xfer_funds(0, 0, 10);
+  xfer_funds(0, 1, 10);
 END;
 /
   
