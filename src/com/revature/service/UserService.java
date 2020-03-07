@@ -27,6 +27,10 @@ public class UserService {
 		return ud.exist(u);
 	}
 	
+	public boolean existByName(String name) {
+		return ud.existByName(name);
+	}
+	
 	public void registerUser(User u) {
 		if (ud.exist(u)) {
 			log.info("Attept to insert existing user into database: " + u.toString());

@@ -43,7 +43,7 @@ public class UserServiceTest {
 
 	@Test
 	public void testAdd() {
-		PHash ph = new PHash("something");
+		PHash ph = new PHash(); ph.setPassword("something");
 		ua = new User(1, "Twonk", ph);
 		
 	    us.registerUser(ua);
@@ -52,12 +52,31 @@ public class UserServiceTest {
 
 	@Test
 	public void testDeleteAdd() {
-		PHash ph = new PHash("something");
+		PHash ph = new PHash(); ph.setPassword("something");
+		ua = new User(1, "Twonk", ph);
+		
+	    us.registerUser(ua);
+	    assertTrue(us.exist(ua));
+	}
+
+	@Test
+	public void testFindByName() {
+		PHash ph = new PHash(); ph.setPassword("something");
 		ua = new User(1, "Twonk", ph);
 		
 		us.removeUser(ua);
 	    us.registerUser(ua);
-	    assertTrue(us.exist(ua));
+	    assertTrue(us.existByName(ua.getName()));
+	}
+
+	@Test
+	public void testFindByWrongName() {
+		PHash ph = new PHash(); ph.setPassword("something");
+		ua = new User(1, "Twonk", ph);
+		
+		us.removeUser(ua);
+	    us.registerUser(ua);
+	    assertFalse(us.existByName("IckyIckyIckyBotangWazoom"));
 	}
 
 }
