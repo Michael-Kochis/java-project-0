@@ -49,6 +49,31 @@ public class UserDAO implements UserDAOInterface {
 	}
 
 	@Override
+	public boolean exist(User u) {
+		return existByUID(u.getBankID());
+	}
+
+	@Override
+	public boolean existByUID(long uid) {
+		User exists = this.readUserByUID(uid);
+		if (exists == null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	@Override
+	public boolean existByName(String name) {
+		User exists = this.readUserByUsername(name);
+		if (exists == null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	@Override
 	public TreeSet<User> readAllUsers() {
 		  TreeSet<User> returnThis = new TreeSet<User>();
 		  

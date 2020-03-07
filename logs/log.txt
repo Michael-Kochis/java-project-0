@@ -28,3 +28,27 @@
 2020-03-06 14:54:53 TRACE Driver:26 - Application ending successfully.
 
 
+2020-03-07 09:28:13 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-07 09:28:13 INFO  UserDAO:135 - Attempt to retreive record from Accounts table failed
+2020-03-07 09:28:13 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-07 09:28:13 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:29:14 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-07 09:29:15 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:29:15 INFO  UserService:32 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-07 09:29:15 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:31:45 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-07 09:31:45 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:31:45 INFO  UserService:32 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-07 09:31:45 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:31:45 TRACE UserDAO:45 - Record successfully deleted from User table in database
+2020-03-07 09:31:45 INFO  UserDAO:135 - Attempt to retreive record from Accounts table failed
+2020-03-07 09:31:45 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-07 09:31:45 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:33:42 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-07 09:33:42 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:33:42 INFO  UserService:32 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-07 09:33:42 TRACE UserDAO:132 - Single record returned from Accounts table.
+2020-03-07 09:33:42 TRACE UserDAO:45 - Record successfully deleted from User table in database
+2020-03-07 09:33:42 INFO  UserDAO:135 - Attempt to retreive record from Accounts table failed
+2020-03-07 09:33:42 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-07 09:33:42 TRACE UserDAO:132 - Single record returned from Accounts table.
