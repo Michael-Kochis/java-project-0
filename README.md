@@ -46,7 +46,7 @@ Maven is required to manage dependencies required by this project.
 ## Bank Employee Functions
 - [ ]	Employees of the bank should be able to view all of their customers information.
 - - [ ] May not edit customer information or account balances
-- [ ]	Employees should be able to approve/deny open applications for accounts
+- [x]	Employees should be able to approve/deny open applications for accounts
 
 ## Bank Admin Functions
 - [ ]	Bank admins should be able to view and edit all accounts

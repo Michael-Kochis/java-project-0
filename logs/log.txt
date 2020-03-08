@@ -507,3 +507,30 @@ Caused by: Error : 904, Position : 34, Sql = DELETE FROM USER_PERMISSION WHERE U
 2020-03-08 15:53:35 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
 2020-03-08 15:53:35 TRACE EmployeeConsoleController:66 - Account 7 is approved and ready for use.
 2020-03-08 15:55:24 TRACE EmployeeConsoleController:32 - Request from user to exit.
+2020-03-08 16:39:22 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 16:39:22 INFO  Driver:15 - Application started successfully.
+2020-03-08 16:39:32 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 16:39:37 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 16:39:39 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 16:39:39 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 16:39:39 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 16:39:39 TRACE AccountDAO:211 - 0 records returned from Accounts table.
+2020-03-08 16:39:39 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 16:39:42 TRACE CustomerConsoleController:65 - Customer applying for checking account.
+2020-03-08 16:39:42 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
+2020-03-08 16:39:42 TRACE AccountDAO:46 - Single record successfully inserted into UserAccounts table.
+2020-03-08 16:39:54 TRACE CustomerConsoleController:35 - Request from the user to return to log in.
+2020-03-08 16:39:57 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 16:40:00 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 16:40:07 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 16:40:07 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-08 16:40:07 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-08 16:40:07 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-08 16:40:07 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-08 16:40:16 TRACE BankAdminConsoleController:39 - Request from user to go to Employee menu.
+2020-03-08 16:40:19 TRACE AccountDAO:130 - 0 records returned from Accounts table.
+2020-03-08 16:40:19 TRACE AccountDAO:130 - 1 records returned from Accounts table.
+2020-03-08 16:40:33 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-08 16:40:33 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 16:40:33 TRACE EmployeeConsoleController:78 - Account 12 is denied.
+2020-03-08 16:40:43 TRACE EmployeeConsoleController:32 - Request from user to exit.

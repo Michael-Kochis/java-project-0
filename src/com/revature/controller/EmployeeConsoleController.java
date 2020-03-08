@@ -64,6 +64,18 @@ public class EmployeeConsoleController {
 					AccountService.updateAccount(editThis);
 					System.out.println("Account approved and ready for use.");
 					log.trace("Account " + uid + " is approved and ready for use.");
+				} else if (temp.equalsIgnoreCase("2")) {
+					TreeSet<Account> list = AccountService.readAllApplied();
+					for (Account a : list) {
+						System.out.println(a);
+					}
+					System.out.println("Which account do you want to deny?");
+					long uid = scan.nextLong();
+					Account editThis = AccountService.readByAccountUID(uid);
+					editThis.setType(AccountType.DENY);
+					AccountService.updateAccount(editThis);
+					System.out.println("Account denied.");
+					log.trace("Account " + uid + " is denied.");
 				}
 			}
 		}
