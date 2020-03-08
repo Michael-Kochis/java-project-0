@@ -9,6 +9,7 @@ public interface PermissionsDAOInterface {
 	public void createPermission(Permission p);
 	public void createUserPermission(long uid, Permission p);
 	public void deletePermission(Permission p);
+	public void deleteAllPermissionsByUserUID(long uid);
 	public TreeSet<Permission> readAllPermissions();
 	public Permission readPermissionByType(PermissionType pt);
 	public TreeSet<Permission> readPermissionsByOwnerUID(long uid);

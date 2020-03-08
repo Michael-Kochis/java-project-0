@@ -58,6 +58,19 @@ public class PermissionsDAO implements PermissionsDAOInterface {
 	}
 
 	@Override
+	public void deleteAllPermissionsByUserUID(long uid) {
+	      try {
+		  	    Connection testConn = JDBCConnector.getConn();
+		  	    PreparedStatement st = testConn.prepareStatement("DELETE FROM USER_PERMISSION WHERE BANKUID = ?");
+		  	    st.setLong(1, uid);
+		  	    st.execute();
+		  	    log.trace("Records successfully deleted from User_Permission table in database");
+			  } catch (SQLException e){
+				 	log.warn("Error while removing from User_Permission table in database", e);
+			  }      
+	}
+	
+	@Override
 	public TreeSet<Permission> readAllPermissions() {
 		  TreeSet<Permission> returnThis = new TreeSet<Permission>();
 		  

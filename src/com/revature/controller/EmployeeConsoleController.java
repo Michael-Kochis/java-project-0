@@ -5,9 +5,7 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.controller.model.UserLogin;
-import com.revature.enums.AccountType;
 import com.revature.model.FullUser;
-import com.revature.service.AccountService;
 import com.revature.view.console.ConsoleEmployeeUI;
 import com.revature.view.scanner.ConsoleScanner;
 
