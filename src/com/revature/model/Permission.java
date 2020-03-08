@@ -2,7 +2,7 @@ package com.revature.model;
 
 import com.revature.enums.PermissionType;
 
-public class Permission {
+public class Permission implements Comparable {
 	private PermissionType permission;
 	
 	public Permission() {
@@ -20,6 +20,12 @@ public class Permission {
 
 	public void setPermission(PermissionType permission) {
 		this.permission = permission;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Permission p = (Permission) o;
+		return PermissionType.typeToInt(this.permission)-PermissionType.typeToInt(p.permission);
 	}
 
 	@Override
@@ -52,4 +58,5 @@ public class Permission {
 	public String toString() {
 		return "Permission [permission=" + permission + "]";
 	}
+
 }

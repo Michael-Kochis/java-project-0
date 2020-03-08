@@ -36,6 +36,10 @@ public class UserService {
 			ud = new UserDAO();
 		return ud.getMax();
 	}
+	
+	public static User readByUsername(String s) {
+		return ud.readUserByUsername(s);
+	}
 
 	public void registerUser(User u) {
 		if (ud.exist(u)) {

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.revature.controller.model.UserLogin;
 import com.revature.controller.model.UserRegister;
 import com.revature.view.console.ConsoleMainUI;
 import com.revature.view.scanner.ConsoleScanner;
@@ -26,6 +27,8 @@ public class MainMenuController {
 					log.trace("Request from user to exit.");
 					System.exit(0);
 				} else if (temp.equalsIgnoreCase("1")) {
+					log.trace("Request from the user to log in.");
+					UserLogin.Login();
 				} else if (temp.equalsIgnoreCase("2")) {
 					log.trace("Request from user to Register");
 					ur.userInput();

@@ -78,5 +78,10 @@ public class UserServiceTest {
 	    us.registerUser(ua);
 	    assertFalse(us.existByName("IckyIckyIckyBotangWazoom"));
 	}
+	
+	@Test
+	public void getMaxNotNull() {
+		assertNotNull(us.getMax());
+	}
 
 }
