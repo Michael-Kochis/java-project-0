@@ -102,6 +102,34 @@ public class AccountDAO implements AccountDAOInterface {
 	public Account readAccount(Account a) {
 		return readAccountByUID(a.getAccountNumber());
 	}
+	
+	@Override
+	public TreeSet<Account> readAllByType(AccountType type) {
+		TreeSet<Account> returnThis = new TreeSet<Account>();
+		
+	      try {
+		    Connection testConn = JDBCConnector.getConn();
+		    PreparedStatement st = testConn.prepareStatement("SELECT a.BANKUID, a.accttype, a.amount FROM BANKACCOUNT a WHERE ACCTTYPE = ?");
+		    st.setLong(1, AccountType.typeToInt(type));
+		    ResultSet rs = st.executeQuery();
+		    
+	    	long auid;
+	    	double balance;
+	    	
+	    	while (rs.next()) {
+		    	auid = rs.getLong("BANKUID");
+		    	balance = rs.getDouble("amount");
+		    	
+			    Account temp = new Account(auid, type, balance);
+		    	returnThis.add(temp);
+		    } 
+		  } catch (SQLException e){
+		 	log.warn("Error while accessing Accounts table in database", e);
+	  	  }
+	      
+	      log.trace(returnThis.size() + " records returned from Accounts table.");
+		return returnThis;
+	}
 
 	@Override
 	public Account readAccountByUID(long uid) {

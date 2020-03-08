@@ -26,6 +26,13 @@ public class AccountService {
     public static TreeSet<Account> readAllByUserUID(long uid) {
     	return ad.readAllByUserUID(uid);
     }
+    
+    public static TreeSet<Account> readAllApplied() {
+    	TreeSet<Account> returnThis = ad.readAllByType(AccountType.APPLY_SAVE);
+    	returnThis.addAll(ad.readAllByType(AccountType.APPLY_CHECK));
+    	
+    	return returnThis;
+    }
 
 	public static void accountApplication(long ownerID, AccountType type) {
 		long acctNum = BankID.getNextBankID();
@@ -37,5 +44,13 @@ public class AccountService {
 
 	public static void createUserAccount(long u, long a) {
 		ad.createUserAccount(u, a);
+	}
+
+	public static Account readByAccountUID(long uid) {
+		return ad.readAccountByUID(uid);
+	}
+
+	public static void updateAccount(Account a) {
+		ad.updateAccount(a);
 	}
 }

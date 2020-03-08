@@ -13,7 +13,7 @@ Maven is required to manage dependencies required by this project.
 
 ## Agile Requirements
 - [x] Develop using the agile methodologies taught in class
-- - [x] You should be using TDD (see JUnit4 requirements)
+- - [ ] You should be using TDD (see JUnit4 requirements)
 - - [x] All transactions should be logged (see Log4J requirements)
 
 ## Java Requirements
@@ -23,7 +23,7 @@ Maven is required to manage dependencies required by this project.
 
 ## User Accounts
 - [x]	Customers of the bank should be able to register with a username and password, and apply to open an account.
-- - [ ] Customers should be able to apply for joint accounts
+- - [x] Customers should be able to apply for joint accounts
 - [ ] Mandatory User Information
 - - [ ] Personal information
 
@@ -31,12 +31,12 @@ Maven is required to manage dependencies required by this project.
 - [ ]	Once the account is open, customers should be able to withdraw, deposit, and transfer funds between accounts
 - - [ ] All basic validation should be done, such as trying to input negative amounts, overdrawing from accounts etc.
 - [ ] Mandatory Account information
-- - [ ] Account information
-- - [ ] Account balances
+- - [x] Account information
+- - [x] Account balances
 
 ## Bank Customer Functions
 - [ ] View and edit their personal information
-- [ ] View account information and balances, but not directly edit
+- [x] View account information and balances, but not directly edit
 - [ ] Customer Banking Operations
 - - [ ]  Deposit
 - - [ ]  Withdraw
@@ -50,7 +50,7 @@ Maven is required to manage dependencies required by this project.
 
 ## Bank Admin Functions
 - [ ]	Bank admins should be able to view and edit all accounts
-- - [ ] Approving/denying accounts (see Employee)
+- - [x] Approving/denying accounts (see Employee)
 - - [ ] withdrawing, depositing, transferring from all accounts
 - - [ ] canceling accounts
 
@@ -58,7 +58,7 @@ Maven is required to manage dependencies required by this project.
 - [ ]	100% test coverage for the service layer is expected using JUnit4
 
 ## Log4J
-- [ ]	Logging should be accomplished using Log4J
+- [x]	Logging should be accomplished using Log4J
 - - [ ] Logging of transactions will also be stored in JDBC/SQL (requirement SQL 1)
 
 ## SQL Requirements

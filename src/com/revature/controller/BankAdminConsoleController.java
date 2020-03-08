@@ -36,13 +36,13 @@ public class BankAdminConsoleController {
 					UserLogin.Login();
 				} else if (temp.equalsIgnoreCase("E")) {
 					if (runAs.isEmployee()) {
-					    log.trace("Request from user to go to Customer menu.");
-					    CustomerConsoleController.runCustomerUI(runAs);
+					    log.trace("Request from user to go to Employee menu.");
+					    EmployeeConsoleController.runEmployeeUI(runAs);
 					} else {
 						log.warn("Attempt by user " + runAs.getUser().getName() + " to access employee functions.");
 						System.out.println("Access violation detected, returning you to login screen.");
 						runAs = null;
-						UserLogin.Login();
+						MainMenuController.runMainUI();
 					}
 				} else if (temp.equalsIgnoreCase("C")) {
 					log.trace("Request from user to go to Customer menu.");
