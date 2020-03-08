@@ -112,6 +112,10 @@ public class CustomerConsoleController {
 					acctUID = scan.nextLong();
 					System.out.println("How much did you want to deposit?");
 					amount = scan.nextDouble();
+					if (amount <= 0.0) {
+						System.out.println("Invalid amount.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to deposit invalid amount.");
+					}
 					for (Account a : runAs.accts) {
 						if (a.getAccountNumber() == acctUID) {
 							editThis = a;

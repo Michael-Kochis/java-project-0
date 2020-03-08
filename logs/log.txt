@@ -559,3 +559,161 @@ Caused by: Error : 904, Position : 34, Sql = DELETE FROM USER_PERMISSION WHERE U
 2020-03-08 18:09:57 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
 2020-03-08 18:10:08 TRACE AccountDAO:65 - Record successfully deleted from Accounts table in database
 2020-03-08 18:13:21 TRACE CustomerConsoleController:36 - Request from user to exit.
+2020-03-08 18:15:30 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:15:30 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:15:34 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:15:39 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:15:45 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:15:45 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-08 18:15:45 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-08 18:15:45 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-08 18:15:45 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-08 18:15:50 TRACE BankAdminConsoleController:39 - Request from user to go to Employee menu.
+2020-03-08 18:15:54 TRACE AccountDAO:130 - 1 records returned from Accounts table.
+2020-03-08 18:15:54 TRACE AccountDAO:130 - 0 records returned from Accounts table.
+2020-03-08 18:15:57 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-08 18:15:57 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 18:15:57 TRACE EmployeeConsoleController:66 - Account 15 is approved and ready for use.
+2020-03-08 18:16:06 TRACE EmployeeConsoleController:35 - Request from the user to return to log in.
+2020-03-08 18:16:26 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:16:30 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:16:30 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:16:30 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:16:30 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-08 18:16:30 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:16:54 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 18:16:54 TRACE CustomerConsoleController:131 - User BetterThanYou successfully withdrew 50.0 from account 15
+2020-03-08 18:23:28 TRACE CustomerConsoleController:36 - Request from user to exit.
+2020-03-08 18:23:33 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:23:33 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:23:39 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:23:44 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:23:47 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:23:47 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:23:47 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:23:47 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-08 18:23:47 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:23:58 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 18:23:58 WARN  TransactionDAO:31 - Error while inserting into BankTrans table in database
+java.sql.SQLSyntaxErrorException: ORA-00904: "ACCTUID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.TransactionDAO.createTransaction(TransactionDAO.java:28)
+	at com.revature.test.service.TransactionService.create(TransactionService.java:10)
+	at com.revature.controller.CustomerConsoleController.runCustomerUI(CustomerConsoleController.java:129)
+	at com.revature.controller.RootMenuController.runRootMenu(RootMenuController.java:21)
+	at com.revature.controller.model.UserLogin.Login(UserLogin.java:39)
+	at com.revature.controller.MainMenuController.runMainUI(MainMenuController.java:31)
+	at com.revature.controller.Driver.main(Driver.java:17)
+Caused by: Error : 904, Position : 42, Sql = INSERT INTO BANKTRANS (TRANSUID, USERUID, ACCTUID, TRANSTYPE, AMOUNT) VALUES (:1 , :2 , :3 , :4 , :5 ), OriginalSql = INSERT INTO BANKTRANS (TRANSUID, USERUID, ACCTUID, TRANSTYPE, AMOUNT) VALUES (?, ?, ?, ?, ?), Error Msg = ORA-00904: "ACCTUID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 20 more
+2020-03-08 18:23:58 TRACE CustomerConsoleController:131 - User BetterThanYou successfully withdrew 10.0 from account 15
+2020-03-08 18:24:55 TRACE CustomerConsoleController:36 - Request from user to exit.
+2020-03-08 18:25:00 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:25:00 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:25:03 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:25:07 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:25:09 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:25:09 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:25:09 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:25:09 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-08 18:25:09 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:25:18 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 18:25:18 WARN  TransactionDAO:31 - Error while inserting into BankTrans table in database
+java.sql.SQLSyntaxErrorException: ORA-00925: missing INTO keyword
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.TransactionDAO.createTransaction(TransactionDAO.java:28)
+	at com.revature.test.service.TransactionService.create(TransactionService.java:10)
+	at com.revature.controller.CustomerConsoleController.runCustomerUI(CustomerConsoleController.java:129)
+	at com.revature.controller.RootMenuController.runRootMenu(RootMenuController.java:21)
+	at com.revature.controller.model.UserLogin.Login(UserLogin.java:39)
+	at com.revature.controller.MainMenuController.runMainUI(MainMenuController.java:31)
+	at com.revature.controller.Driver.main(Driver.java:17)
+Caused by: Error : 925, Position : 7, Sql = INSERT (TRANSUID, USERUID, ACCTUID, TRANSTYPE, AMOUNT) INTO BANKTRANS VALUES (:1 , :2 , :3 , :4 , :5 ), OriginalSql = INSERT (TRANSUID, USERUID, ACCTUID, TRANSTYPE, AMOUNT) INTO BANKTRANS VALUES (?, ?, ?, ?, ?), Error Msg = ORA-00925: missing INTO keyword
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 20 more
+2020-03-08 18:25:18 TRACE CustomerConsoleController:131 - User BetterThanYou successfully withdrew 10.0 from account 15
+2020-03-08 18:26:20 TRACE CustomerConsoleController:36 - Request from user to exit.
+2020-03-08 18:26:41 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:26:42 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:26:50 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:26:57 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:27:00 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:27:00 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:27:00 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:27:00 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-08 18:27:00 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:27:20 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 18:27:20 WARN  TransactionDAO:30 - Error while inserting into BankTrans table in database
+java.sql.SQLSyntaxErrorException: ORA-00904: "ACCTUID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.TransactionDAO.createTransaction(TransactionDAO.java:27)
+	at com.revature.test.service.TransactionService.create(TransactionService.java:10)
+	at com.revature.controller.CustomerConsoleController.runCustomerUI(CustomerConsoleController.java:129)
+	at com.revature.controller.RootMenuController.runRootMenu(RootMenuController.java:21)
+	at com.revature.controller.model.UserLogin.Login(UserLogin.java:39)
+	at com.revature.controller.MainMenuController.runMainUI(MainMenuController.java:31)
+	at com.revature.controller.Driver.main(Driver.java:17)
+Caused by: Error : 904, Position : 42, Sql = INSERT INTO BANKTRANS (TRANSUID, USERUID, ACCTUID, TRANSTYPE, AMOUNT) VALUES (:1 , :2 , :3 , :4 , :5 ), OriginalSql = INSERT INTO BANKTRANS (TRANSUID, USERUID, ACCTUID, TRANSTYPE, AMOUNT) VALUES (?, ?, ?, ?, ?), Error Msg = ORA-00904: "ACCTUID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 20 more
+2020-03-08 18:27:20 TRACE CustomerConsoleController:131 - User BetterThanYou successfully withdrew 10.0 from account 15
+2020-03-08 18:27:23 TRACE CustomerConsoleController:36 - Request from user to exit.
+2020-03-08 18:27:52 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:27:52 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:28:00 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:28:08 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:28:10 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:28:10 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:28:10 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:28:10 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-08 18:28:10 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:28:19 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-08 18:28:19 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-08 18:28:19 TRACE CustomerConsoleController:131 - User BetterThanYou successfully withdrew 10.0 from account 15
+2020-03-08 18:28:27 TRACE CustomerConsoleController:36 - Request from user to exit.
