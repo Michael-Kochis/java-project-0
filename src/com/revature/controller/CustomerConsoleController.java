@@ -6,10 +6,14 @@ import org.apache.log4j.Logger;
 
 import com.revature.controller.model.UserLogin;
 import com.revature.enums.AccountType;
+import com.revature.model.Account;
+import com.revature.model.BankID;
 import com.revature.model.FullUser;
+import com.revature.model.Transaction;
 import com.revature.model.User;
 import com.revature.service.AccountService;
 import com.revature.service.UserService;
+import com.revature.test.service.TransactionService;
 import com.revature.view.console.ConsoleCustomerUI;
 import com.revature.view.scanner.ConsoleScanner;
 
@@ -90,6 +94,44 @@ public class CustomerConsoleController {
 					cc.displayMenu();;
 				} else if (temp.equalsIgnoreCase("4")) {
 					runAs.showAccounts();
+					cc.displayMenu();
+				} else if (temp.equalsIgnoreCase("5")) {
+					for (Account a : runAs.accts) {						
+						if ((a.getType() == AccountType.CANCEL) ||
+							a.getType() == AccountType.DENY) {
+							AccountService.deleteAccount(a);
+						}
+					}
+					runAs.setAccts(AccountService.readAllByUserUID(runAs.getUser().getBankID()) );
+				} else if (temp.equalsIgnoreCase("6")) {
+					long acctUID;
+					double amount;
+					Account editThis = null;
+					runAs.showAccounts();
+					System.out.println("Please select one of the above accounts.");
+					acctUID = scan.nextLong();
+					System.out.println("How much did you want to deposit?");
+					amount = scan.nextDouble();
+					for (Account a : runAs.accts) {
+						if (a.getAccountNumber() == acctUID) {
+							editThis = a;
+						}
+					}
+					if (editThis == null) {
+						System.out.println("You lack permission to edit that account.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to access account " + acctUID);
+					} else {
+						editThis.setBalance(editThis.getBalance() + amount);
+						AccountService.updateAccount(editThis);
+						Transaction t = new Transaction(
+								BankID.getNextBankID(), runAs.getUser().getBankID(),
+								editThis.getAccountNumber(), 0L, amount);
+						TransactionService.create(t);
+						
+						log.trace("User " + runAs.getUser().getName() + " successfully withdrew " + amount
+								+ " from account " + acctUID );
+						System.out.println("Transaction complete.");
+					}
 					cc.displayMenu();
 				} 	
 			} 

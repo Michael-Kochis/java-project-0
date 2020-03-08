@@ -534,3 +534,28 @@ Caused by: Error : 904, Position : 34, Sql = DELETE FROM USER_PERMISSION WHERE U
 2020-03-08 16:40:33 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
 2020-03-08 16:40:33 TRACE EmployeeConsoleController:78 - Account 12 is denied.
 2020-03-08 16:40:43 TRACE EmployeeConsoleController:32 - Request from user to exit.
+2020-03-08 18:04:11 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:04:11 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:04:16 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:04:22 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:04:24 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:04:24 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:04:24 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:04:24 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-08 18:04:24 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:05:01 INFO  CustomerConsoleController:115 - Attempt by BetterThanYou to access account 13
+2020-03-08 18:05:22 TRACE CustomerConsoleController:65 - Customer applying for savings account
+2020-03-08 18:05:22 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
+2020-03-08 18:05:22 TRACE AccountDAO:46 - Single record successfully inserted into UserAccounts table.
+2020-03-08 18:05:29 TRACE CustomerConsoleController:36 - Request from user to exit.
+2020-03-08 18:09:40 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 18:09:40 INFO  Driver:15 - Application started successfully.
+2020-03-08 18:09:49 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 18:09:55 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:09:57 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 18:09:57 TRACE UserDAO:37 - User BetterThanYou has successfully logged in.
+2020-03-08 18:09:57 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-08 18:09:57 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-08 18:09:57 TRACE RootMenuController:20 - Customer Access granted to user BetterThanYou
+2020-03-08 18:10:08 TRACE AccountDAO:65 - Record successfully deleted from Accounts table in database
+2020-03-08 18:13:21 TRACE CustomerConsoleController:36 - Request from user to exit.

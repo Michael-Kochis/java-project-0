@@ -53,4 +53,8 @@ public class AccountService {
 	public static void updateAccount(Account a) {
 		ad.updateAccount(a);
 	}
+
+	public static void deleteAccount(Account a) {
+		ad.deleteAccount(a);
+	}
 }

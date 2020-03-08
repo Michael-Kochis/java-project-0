@@ -26,6 +26,10 @@ public class ConsoleCustomerUI extends ConsoleMenu {
 		bankCustomerMenu.add('2', "Apply for a checking account");
 		bankCustomerMenu.add('3', "Make one of your accounts a joint account");
 		bankCustomerMenu.add('4', "View all of your accounts");
+		bankCustomerMenu.add('5', "Delete your denied/cancelled accounts");
+		bankCustomerMenu.add('6', "Deposit into an account");
+		bankCustomerMenu.add('7', "Withdraw from an account");
+		bankCustomerMenu.add('8', "Transfer from an account you own.");
 		bankCustomerMenu.add('A', "Access Bank Admin Commands");
 		bankCustomerMenu.add('E', "Access Bank Employee Commands");
 		bankCustomerMenu.add('X', "Log off and return to login menu.");

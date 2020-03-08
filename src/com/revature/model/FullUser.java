@@ -42,6 +42,14 @@ public class FullUser {
 		this.perms = perms;
 	}
 	
+	public TreeSet<Account> getAccts() {
+		return accts;
+	}
+
+	public void setAccts(TreeSet<Account> accts) {
+		this.accts = accts;
+	}
+
 	public boolean isAdmin() {
 		for (Permission p : this.perms) {
 			if (p.getPermission() == PermissionType.PERM_ADM) {
