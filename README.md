@@ -12,9 +12,9 @@ Maven is required to manage dependencies required by this project.
 - JavaBank_Password: the password to use for the login (above)
 
 ## Agile Requirements
-- [ ] Develop using the agile methodologies taught in class
-- - [ ] You should be using TDD (see JUnit4 requirements)
-- - [ ] All transactions should be logged (see Log4J requirements)
+- [x] Develop using the agile methodologies taught in class
+- - [x] You should be using TDD (see JUnit4 requirements)
+- - [x] All transactions should be logged (see Log4J requirements)
 
 ## Java Requirements
 - [x]	Build the application using Java 8

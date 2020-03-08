@@ -8,6 +8,7 @@ import com.revature.dao.AccountDAO;
 import com.revature.enums.AccountType;
 import com.revature.model.Account;
 import com.revature.model.BankID;
+import com.revature.model.FullUser;
 
 public class AccountService {
 	private static Logger log = Logger.getLogger(AccountService.class);
@@ -32,5 +33,9 @@ public class AccountService {
 		ad.createAccount(a);
 		ad.createUserAccount(ownerID, acctNum);
 		
+	}
+
+	public static void createUserAccount(long u, long a) {
+		ad.createUserAccount(u, a);
 	}
 }

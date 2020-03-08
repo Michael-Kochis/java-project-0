@@ -253,3 +253,115 @@
 2020-03-08 09:47:00 TRACE CustomerConsoleController:57 - Customer applying for savings account
 2020-03-08 09:47:00 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
 2020-03-08 09:47:00 TRACE AccountDAO:46 - Single record successfully inserted into Accounts table.
+2020-03-08 10:42:41 TRACE CustomerConsoleController:30 - Request from user to exit.
+2020-03-08 11:07:46 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 11:07:46 INFO  Driver:15 - Application started successfully.
+2020-03-08 11:07:51 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 11:07:53 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:07:57 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:07:57 TRACE UserDAO:37 - User Twonk has successfully logged in.
+2020-03-08 11:07:57 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 11:07:57 TRACE AccountDAO:183 - 3 records returned from Accounts table.
+2020-03-08 11:07:57 TRACE RootMenuController:20 - Customer Access granted to user Twonk
+2020-03-08 11:08:00 TRACE CustomerConsoleController:73 - Customer applying for joint account.
+2020-03-08 11:08:30 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:08:30 TRACE CustomerConsoleController:85 - User Twonk has shared account 7 with user Highborn
+2020-03-08 11:08:30 TRACE AccountDAO:46 - Single record successfully inserted into UserAccounts table.
+2020-03-08 11:09:51 TRACE CustomerConsoleController:32 - Request from user to exit.
+2020-03-08 11:14:01 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 11:14:01 INFO  Driver:15 - Application started successfully.
+2020-03-08 11:14:04 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 11:14:06 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:14:09 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:14:10 TRACE UserDAO:37 - User Twonk has successfully logged in.
+2020-03-08 11:14:10 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 11:14:10 TRACE AccountDAO:183 - 3 records returned from Accounts table.
+2020-03-08 11:14:10 TRACE RootMenuController:20 - Customer Access granted to user Twonk
+2020-03-08 11:25:23 TRACE CustomerConsoleController:32 - Request from user to exit.
+2020-03-08 11:25:31 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 11:25:31 INFO  Driver:15 - Application started successfully.
+2020-03-08 11:25:49 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 11:25:53 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:25:56 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:25:56 TRACE UserDAO:37 - User Twonk has successfully logged in.
+2020-03-08 11:25:56 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 11:25:56 WARN  AccountDAO:180 - Error while accessing Accounts table in database
+java.sql.SQLSyntaxErrorException: ORA-00907: missing right parenthesis
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:807)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3713)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1167)
+	at com.revature.dao.AccountDAO.readAllByUserUID(AccountDAO.java:165)
+	at com.revature.service.AccountService.readAllByUserUID(AccountService.java:27)
+	at com.revature.model.FullUser.init(FullUser.java:26)
+	at com.revature.model.FullUser.<init>(FullUser.java:20)
+	at com.revature.controller.model.UserLogin.Login(UserLogin.java:38)
+	at com.revature.controller.MainMenuController.runMainUI(MainMenuController.java:31)
+	at com.revature.controller.Driver.main(Driver.java:17)
+Caused by: Error : 907, Position : 17, Sql = SELECT (a.BANKUID, a.accttype, a.amount) FROM BANKACCOUNT a, USER_ACCOUNT u WHERE a.bankuid = b.acctuid AND b.useruid = :1 , OriginalSql = SELECT (a.BANKUID, a.accttype, a.amount) FROM BANKACCOUNT a, USER_ACCOUNT u WHERE a.bankuid = b.acctuid AND b.useruid = ?, Error Msg = ORA-00907: missing right parenthesis
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 21 more
+2020-03-08 11:25:56 TRACE AccountDAO:183 - 0 records returned from Accounts table.
+2020-03-08 11:25:56 TRACE RootMenuController:20 - Customer Access granted to user Twonk
+2020-03-08 11:26:43 TRACE CustomerConsoleController:32 - Request from user to exit.
+2020-03-08 11:26:52 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 11:26:52 INFO  Driver:15 - Application started successfully.
+2020-03-08 11:26:54 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 11:26:57 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:27:05 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:27:05 TRACE UserDAO:37 - User Twonk has successfully logged in.
+2020-03-08 11:27:05 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 11:27:05 WARN  AccountDAO:180 - Error while accessing Accounts table in database
+java.sql.SQLSyntaxErrorException: ORA-00907: missing right parenthesis
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:807)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3713)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1167)
+	at com.revature.dao.AccountDAO.readAllByUserUID(AccountDAO.java:165)
+	at com.revature.service.AccountService.readAllByUserUID(AccountService.java:27)
+	at com.revature.model.FullUser.init(FullUser.java:26)
+	at com.revature.model.FullUser.<init>(FullUser.java:20)
+	at com.revature.controller.model.UserLogin.Login(UserLogin.java:38)
+	at com.revature.controller.MainMenuController.runMainUI(MainMenuController.java:31)
+	at com.revature.controller.Driver.main(Driver.java:17)
+Caused by: Error : 907, Position : 17, Sql = SELECT (a.BANKUID, a.accttype, a.amount) FROM (BANKACCOUNT a, USER_ACCOUNT u) WHERE a.bankuid = b.acctuid AND b.useruid = :1 , OriginalSql = SELECT (a.BANKUID, a.accttype, a.amount) FROM (BANKACCOUNT a, USER_ACCOUNT u) WHERE a.bankuid = b.acctuid AND b.useruid = ?, Error Msg = ORA-00907: missing right parenthesis
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 21 more
+2020-03-08 11:27:05 TRACE AccountDAO:183 - 0 records returned from Accounts table.
+2020-03-08 11:27:05 TRACE RootMenuController:20 - Customer Access granted to user Twonk
+2020-03-08 11:32:35 TRACE CustomerConsoleController:32 - Request from user to exit.
+2020-03-08 11:32:43 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 11:32:43 INFO  Driver:15 - Application started successfully.
+2020-03-08 11:32:51 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 11:32:53 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:32:56 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 11:32:56 TRACE UserDAO:37 - User Twonk has successfully logged in.
+2020-03-08 11:32:56 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 11:32:56 TRACE AccountDAO:183 - 1 records returned from Accounts table.
+2020-03-08 11:32:56 TRACE RootMenuController:20 - Customer Access granted to user Twonk

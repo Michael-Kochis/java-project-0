@@ -7,7 +7,9 @@ import org.apache.log4j.Logger;
 import com.revature.controller.model.UserLogin;
 import com.revature.enums.AccountType;
 import com.revature.model.FullUser;
+import com.revature.model.User;
 import com.revature.service.AccountService;
+import com.revature.service.UserService;
 import com.revature.view.console.ConsoleCustomerUI;
 import com.revature.view.scanner.ConsoleScanner;
 
@@ -43,6 +45,8 @@ public class CustomerConsoleController {
 						runAs = null;
 						UserLogin.Login();
 					}
+				//} else if (temp.equalsIgnoreCase("D")) { // used for troubleshooting
+				//	System.out.println(runAs.toString());
 				} else if (temp.equalsIgnoreCase("A")) {
 					if (runAs.isAdmin()) {
 					    log.trace("Request from user to go to Admin menu.");
@@ -57,11 +61,32 @@ public class CustomerConsoleController {
 					log.trace("Customer applying for savings account");
 					System.out.println("Account application complete, pending approval.");
 					AccountService.accountApplication(runAs.user.getBankID(), AccountType.APPLY_SAVE);
-					cc.displayMenu();
 				} else if (temp.equalsIgnoreCase("2")) {
 					log.trace("Customer applying for checking account.");
 					System.out.println("Account application complete, pending approval.");
 					AccountService.accountApplication(runAs.user.getBankID(), AccountType.APPLY_CHECK);
+					cc.displayMenu();;
+				} else if (temp.equalsIgnoreCase("3")) {
+					long acctNum;
+					User other;
+					String inString;
+					
+					log.trace("Customer applying for joint account.");
+					System.out.println("Which account do you want to make a joint account?");
+					inString = scan.nextLine();
+					acctNum = Long.parseLong(inString);
+					System.out.println("Which user do you wish to share the account with?");
+					inString = scan.nextLine();
+					other = UserService.readByUsername(inString);
+					if (other == null) {
+						log.warn("Error while assigning joint account.");
+						System.out.println("There was an error processing this request.");
+					} else {
+						log.trace("User " + runAs.getUser().getName() + " has shared account "
+								+ acctNum + " with user " + other.getName());
+						AccountService.createUserAccount(other.getBankID(), acctNum);
+						System.out.println("Account is now shared.");
+					}
 					cc.displayMenu();;
 				} 
 			

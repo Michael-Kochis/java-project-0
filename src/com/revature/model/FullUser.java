@@ -61,6 +61,12 @@ public class FullUser {
 		
 		return false;
 	}
+	
+	public void showAccounts() {
+		for (Account a : this.accts) {
+			System.out.println(a);
+		}
+	}
 
 	@Override
 	public int hashCode() {
