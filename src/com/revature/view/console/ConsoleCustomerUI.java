@@ -26,8 +26,8 @@ public class ConsoleCustomerUI extends ConsoleMenu {
 		bankCustomerMenu.add('2', "Apply for a checking account");
 		bankCustomerMenu.add('A', "Access Bank Admin Commands");
 		bankCustomerMenu.add('E', "Access Bank Employee Commands");
-		bankCustomerMenu.add('Q', "Log off and return to login menu.");
-		bankCustomerMenu.add('X', "Log off and close application.");
+		bankCustomerMenu.add('X', "Log off and return to login menu.");
+		bankCustomerMenu.add('Q', "Log off and close application.");
 	}
 
 }

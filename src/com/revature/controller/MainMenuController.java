@@ -18,7 +18,7 @@ public class MainMenuController {
 	public static void runMainUI() { 
 		String input = null;
 		con.displayMenu();
-		while (input == null) {
+		while (true) {
 			input = scan.nextLine();
 			String temp = "";
 			for (int i = 0; i < input.length(); i++) {
@@ -33,14 +33,10 @@ public class MainMenuController {
 					log.trace("Request from user to Register");
 					ur.userInput();
 					i += input.length();
-				} else {
-					if (i == (input.length()-1) ) {
-						input = null;
-					}
-				}
+					MainMenuController.runMainUI();
+				} 
 			}
 		}
-		MainMenuController.runMainUI();
 		//System.out.println(input);
 	}
 

@@ -7,6 +7,7 @@ import com.revature.model.User;
 
 public interface AccountDAOInterface {
 	public void createAccount(Account a);
+	public void createUserAccount(long ownerID, long acctNum);
 	public void deleteAccount(Account a);
 	public void deleteAccountByUID(long uid);
 	public TreeSet<Account> readAllAccounts();

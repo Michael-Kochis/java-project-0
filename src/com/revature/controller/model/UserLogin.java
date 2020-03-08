@@ -21,6 +21,7 @@ public class UserLogin {
 		User user = null;
 		String uname = null, pword = null;
 		
+		System.out.println("User Login.");
 		System.out.println("Enter your username.");
 		uname = scan.nextLine();
 		uname = uname.trim(); //remove all spaces

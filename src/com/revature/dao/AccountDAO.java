@@ -36,6 +36,21 @@ public class AccountDAO implements AccountDAOInterface {
 	}
 
 	@Override
+	public void createUserAccount(long ownerID, long acctNum) {
+	      try {
+		  	    Connection testConn = JDBCConnector.getConn();
+		  	    PreparedStatement st = testConn.prepareStatement("INSERT INTO USER_ACCOUNT VALUES (?, ?)");
+		  	    st.setLong(1, ownerID);
+		  	    st.setLong(2, acctNum);
+		  	    st.execute();
+		  	    log.trace("Single record successfully inserted into UserAccounts table.");
+			  } catch (SQLException e){
+				log.warn("Error while inserting into UserAccounts table in database", e);
+			  }
+	
+	}
+
+	@Override
 	public void deleteAccount(Account a) {
 	  deleteAccountByUID(a.getAccountNumber());
 	}

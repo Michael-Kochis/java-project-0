@@ -5,7 +5,9 @@ import java.util.TreeSet;
 import org.apache.log4j.Logger;
 
 import com.revature.dao.AccountDAO;
+import com.revature.enums.AccountType;
 import com.revature.model.Account;
+import com.revature.model.BankID;
 
 public class AccountService {
 	private static Logger log = Logger.getLogger(AccountService.class);
@@ -23,4 +25,12 @@ public class AccountService {
     public static TreeSet<Account> readAllByUserUID(long uid) {
     	return ad.readAllByUserUID(uid);
     }
+
+	public static void accountApplication(long ownerID, AccountType type) {
+		long acctNum = BankID.getNextBankID();
+		Account a = new Account(acctNum, type, 0.0d);
+		ad.createAccount(a);
+		ad.createUserAccount(ownerID, acctNum);
+		
+	}
 }
