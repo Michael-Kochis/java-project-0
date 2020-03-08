@@ -21,10 +21,11 @@ public class ConsoleCustomerUI extends ConsoleMenu {
 
 	
 	private void init() {
-		bankCustomerMenu.setTitle("Customer Menu");
+		bankCustomerMenu.setTitle("Customer Menu ");
 		bankCustomerMenu.add('1', "Apply for a savings account");
 		bankCustomerMenu.add('2', "Apply for a checking account");
-		bankCustomerMenu.add('3', "Make one of your accounts a joint account.");
+		bankCustomerMenu.add('3', "Make one of your accounts a joint account");
+		bankCustomerMenu.add('4', "View all of your accounts");
 		bankCustomerMenu.add('A', "Access Bank Admin Commands");
 		bankCustomerMenu.add('E', "Access Bank Employee Commands");
 		bankCustomerMenu.add('X', "Log off and return to login menu.");

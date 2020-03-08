@@ -365,3 +365,44 @@ Caused by: Error : 907, Position : 17, Sql = SELECT (a.BANKUID, a.accttype, a.am
 2020-03-08 11:32:56 TRACE AccountDAO:134 - 0 records returned from Permission table.
 2020-03-08 11:32:56 TRACE AccountDAO:183 - 1 records returned from Accounts table.
 2020-03-08 11:32:56 TRACE RootMenuController:20 - Customer Access granted to user Twonk
+2020-03-08 12:57:05 TRACE CustomerConsoleController:32 - Request from user to exit.
+2020-03-08 12:59:50 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 12:59:50 INFO  Driver:15 - Application started successfully.
+2020-03-08 12:59:55 TRACE MainMenuController:33 - Request from user to Register
+2020-03-08 12:59:59 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 12:59:59 TRACE UserRegister:26 - Attempt to duplicate username Highborn
+2020-03-08 13:00:04 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
+2020-03-08 13:00:28 INFO  UserDAO:166 - Attempt to retreive record from BankUser table failed
+2020-03-08 13:00:28 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-08 13:00:31 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 13:00:35 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:00:39 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:00:40 TRACE UserDAO:37 - User Highborn has successfully logged in.
+2020-03-08 13:00:40 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 13:00:40 TRACE AccountDAO:183 - 1 records returned from Accounts table.
+2020-03-08 13:00:40 TRACE RootMenuController:20 - Customer Access granted to user Highborn
+2020-03-08 13:00:56 WARN  CustomerConsoleController:43 - Attempt by user Highborn to access employee functions.
+2020-03-08 13:04:02 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 13:04:02 INFO  Driver:15 - Application started successfully.
+2020-03-08 13:04:06 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 13:04:11 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:04:11 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:04:17 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 13:04:21 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:04:28 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:04:28 TRACE UserDAO:37 - User Highborn has successfully logged in.
+2020-03-08 13:04:28 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 13:04:28 TRACE AccountDAO:183 - 1 records returned from Accounts table.
+2020-03-08 13:04:28 TRACE RootMenuController:20 - Customer Access granted to user Highborn
+2020-03-08 13:04:39 WARN  CustomerConsoleController:55 - Attempt by user Highborn to access admin functions.
+2020-03-08 13:05:24 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 13:05:24 INFO  Driver:15 - Application started successfully.
+2020-03-08 13:05:27 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 13:05:31 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:05:38 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 13:05:38 TRACE UserDAO:37 - User Highborn has successfully logged in.
+2020-03-08 13:05:38 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 13:05:38 TRACE AccountDAO:183 - 1 records returned from Accounts table.
+2020-03-08 13:05:38 TRACE RootMenuController:20 - Customer Access granted to user Highborn
+2020-03-08 13:05:50 TRACE CustomerConsoleController:35 - Request from the user to return to log in.
+2020-03-08 13:05:52 TRACE MainMenuController:27 - Request from user to exit.

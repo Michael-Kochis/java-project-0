@@ -34,7 +34,7 @@ public class CustomerConsoleController {
 				} else if (temp.equalsIgnoreCase("X")) {
 					log.trace("Request from the user to return to log in.");
 					runAs = null;
-					UserLogin.Login();
+					MainMenuController.runMainUI();
 				} else if (temp.equalsIgnoreCase("E")) {
 					if (runAs.isEmployee()) {
 					    log.trace("Request from user to go to Customer menu.");
@@ -43,7 +43,7 @@ public class CustomerConsoleController {
 						log.warn("Attempt by user " + runAs.getUser().getName() + " to access employee functions.");
 						System.out.println("Access violation detected, returning you to login screen.");
 						runAs = null;
-						UserLogin.Login();
+						MainMenuController.runMainUI();
 					}
 				//} else if (temp.equalsIgnoreCase("D")) { // used for troubleshooting
 				//	System.out.println(runAs.toString());
@@ -55,7 +55,7 @@ public class CustomerConsoleController {
 						log.warn("Attempt by user " + runAs.getUser().getName() + " to access admin functions.");
 						System.out.println("Access violation detected, returning you to login screen.");
 						runAs = null;
-						UserLogin.Login();
+						MainMenuController.runMainUI();
 					}
 				} else if (temp.equalsIgnoreCase("1")) {
 					log.trace("Customer applying for savings account");
@@ -88,8 +88,10 @@ public class CustomerConsoleController {
 						System.out.println("Account is now shared.");
 					}
 					cc.displayMenu();;
-				} 
-			
+				} else if (temp.equalsIgnoreCase("4")) {
+					runAs.showAccounts();
+					cc.displayMenu();
+				} 	
 			} 
 		}
 	}

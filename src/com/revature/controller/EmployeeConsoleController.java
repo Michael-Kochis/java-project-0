@@ -41,7 +41,7 @@ public class EmployeeConsoleController {
 						log.warn("Attempt by user " + runAs.getUser().getName() + " to access admin functions.");
 						System.out.println("Access violation detected, returning you to login screen.");
 						runAs = null;
-						UserLogin.Login();
+						MainMenuController.runMainUI();
 					}
 				} else if (temp.equalsIgnoreCase("C")) {
 					log.trace("Request from user to go to Customer menu.");
