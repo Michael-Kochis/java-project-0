@@ -145,7 +145,7 @@ public class AccountDAO implements AccountDAOInterface {
 		  
 	      try {
 		    Connection testConn = JDBCConnector.getConn();
-		    PreparedStatement st = testConn.prepareStatement("SELECT * FROM BANKACCOUNT a INNER JOIN USER_ACCOUNT ua ON ua.acctuid = ?");
+		    PreparedStatement st = testConn.prepareStatement("SELECT * FROM BANKACCOUNT a INNER JOIN USER_ACCOUNT ua ON ua.useruid = ?");
 		    st.setLong(1, uid);
 		    ResultSet rs = st.executeQuery();
 		    

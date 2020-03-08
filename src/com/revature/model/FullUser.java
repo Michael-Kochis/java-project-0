@@ -2,11 +2,14 @@ package com.revature.model;
 
 import java.util.TreeSet;
 
+import com.revature.enums.PermissionType;
+import com.revature.service.AccountService;
 import com.revature.service.PermissionService;
 
 public class FullUser {
 	public User user;
 	public TreeSet<Permission> perms;
+	public TreeSet<Account> accts;
 	
 	public FullUser() {
 		super();
@@ -20,7 +23,7 @@ public class FullUser {
 	private void init(User u) {
 		this.user = u;
 		this.perms = PermissionService.readPermissionsByUID(this.user.getBankID());
-		
+		this.accts = AccountService.readAllByUserUID(this.user.getBankID());
 	}
 
 	public User getUser() {
@@ -37,6 +40,26 @@ public class FullUser {
 
 	public void setPerms(TreeSet<Permission> perms) {
 		this.perms = perms;
+	}
+	
+	public boolean isAdmin() {
+		for (Permission p : this.perms) {
+			if (p.getPermission() == PermissionType.PERM_ADM) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	public boolean isEmployee() {
+		for (Permission p : this.perms) {
+			if (p.getPermission() == PermissionType.PERM_EMP) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 	@Override
@@ -72,7 +95,8 @@ public class FullUser {
 
 	@Override
 	public String toString() {
-		return "FullUser [user=" + user + ", perms=" + perms + "]";
+		return "FullUser [user=" + user + ", perms=" + perms + ", accts=" + accts + "]";
 	}
+
 	
 }

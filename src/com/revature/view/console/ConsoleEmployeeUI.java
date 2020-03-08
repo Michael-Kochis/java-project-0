@@ -22,6 +22,9 @@ public class ConsoleEmployeeUI extends ConsoleMenu {
 	
 	private void init() {
 		employeeMenu.setTitle("Bank Employee Commands");
+		employeeMenu.add('1', "Approve accounts.");
+		employeeMenu.add('A', "Access Administrative Commands.");
+		employeeMenu.add('E', "Access your customer menu.");
 		employeeMenu.add('Q', "Log off and return to login menu.");
 		employeeMenu.add('X', "Log off and close application.");
 	}

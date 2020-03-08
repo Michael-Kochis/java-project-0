@@ -165,3 +165,34 @@
 2020-03-08 04:52:19 TRACE UserDAO:36 - User BigMoney has successfully logged in.
 2020-03-08 04:52:19 TRACE AccountDAO:134 - 2 records returned from Permission table.
 2020-03-08 04:52:35 TRACE MainMenuController:27 - Request from user to exit.
+2020-03-08 05:34:04 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 05:34:04 INFO  Driver:15 - Application started successfully.
+2020-03-08 05:34:15 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 05:34:18 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
+2020-03-08 05:34:18 TRACE UserDAO:28 - Attempt to log in as nonexistent username Twonky
+2020-03-08 05:34:37 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 05:34:41 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 05:34:46 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 05:34:46 TRACE UserDAO:36 - User Twonk has successfully logged in.
+2020-03-08 05:34:46 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 05:34:46 TRACE AccountDAO:168 - 2 records returned from Accounts table.
+2020-03-08 05:36:59 TRACE MainMenuController:27 - Request from user to exit.
+2020-03-08 05:37:04 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-08 05:37:04 INFO  Driver:15 - Application started successfully.
+2020-03-08 05:37:08 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 05:37:11 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 05:37:14 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 05:37:14 TRACE UserDAO:36 - User Twonk has successfully logged in.
+2020-03-08 05:37:14 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 05:37:14 TRACE AccountDAO:168 - 0 records returned from Accounts table.
+2020-03-08 05:37:26 TRACE MainMenuController:33 - Request from user to Register
+2020-03-08 05:37:34 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
+2020-03-08 05:37:47 INFO  UserDAO:166 - Attempt to retreive record from BankUser table failed
+2020-03-08 05:37:47 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-08 05:37:57 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-08 05:38:00 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 05:38:05 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-08 05:38:05 TRACE UserDAO:36 - User Highborn has successfully logged in.
+2020-03-08 05:38:05 TRACE AccountDAO:134 - 0 records returned from Permission table.
+2020-03-08 05:38:05 TRACE AccountDAO:168 - 0 records returned from Accounts table.
+2020-03-08 05:38:42 TRACE MainMenuController:27 - Request from user to exit.

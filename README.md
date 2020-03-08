@@ -18,11 +18,11 @@ Maven is required to manage dependencies required by this project.
 
 ## Java Requirements
 - [x]	Build the application using Java 8
-- [ ]	All interaction with the user should be done through the console using the `Scanner` class
+- [x]	All interaction with the user should be done through the console using the `Scanner` class
 - [ ]   All objects modeled will include the hashCode, equals, and toString methods.
 
 ## User Accounts
-- [ ]	Customers of the bank should be able to register with a username and password, and apply to open an account.
+- [x]	Customers of the bank should be able to register with a username and password, and apply to open an account.
 - - [ ] Customers should be able to apply for joint accounts
 - [ ] Mandatory User Information
 - - [ ] Personal information
