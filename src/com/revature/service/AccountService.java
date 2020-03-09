@@ -9,6 +9,8 @@ import com.revature.enums.AccountType;
 import com.revature.model.Account;
 import com.revature.model.BankID;
 import com.revature.model.FullUser;
+import com.revature.model.Transaction;
+import com.revature.test.service.TransactionService;
 
 public class AccountService {
 	private static Logger log = Logger.getLogger(AccountService.class);
@@ -56,5 +58,23 @@ public class AccountService {
 
 	public static void deleteAccount(Account a) {
 		ad.deleteAccount(a);
+	}
+	
+	public static void deposit(long userUID, Account a, double howMuch) {
+		a.setBalance(a.getBalance() + howMuch);
+		AccountService.updateAccount(a);
+		Transaction t = new Transaction(
+				BankID.getNextBankID(), userUID,
+				a.getAccountNumber(), 0L, howMuch);
+		TransactionService.create(t);		
+	}
+	
+	public static void withdraw(long userUID, Account a, double howMuch) {
+		a.setBalance(a.getBalance() - howMuch);
+		AccountService.updateAccount(a);
+		Transaction t = new Transaction(
+				BankID.getNextBankID(), userUID,
+				a.getAccountNumber(), 1L, howMuch);
+		TransactionService.create(t);		
 	}
 }

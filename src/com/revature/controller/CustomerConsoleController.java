@@ -125,19 +125,85 @@ public class CustomerConsoleController {
 						System.out.println("You lack permission to edit that account.");
 						log.info("Attempt by " + runAs.getUser().getName() + " to access account " + acctUID);
 					} else {
-						editThis.setBalance(editThis.getBalance() + amount);
-						AccountService.updateAccount(editThis);
-						Transaction t = new Transaction(
-								BankID.getNextBankID(), runAs.getUser().getBankID(),
-								editThis.getAccountNumber(), 0L, amount);
-						TransactionService.create(t);
+						AccountService.deposit(runAs.getUser().getBankID(), editThis, amount);
+						log.trace("User " + runAs.getUser().getName() + " successfully added " + amount
+								+ " to account " + acctUID );
+						System.out.println("Transaction complete.");
+
+					} 
+					cc.displayMenu();
+				} else if (temp.equalsIgnoreCase("7")) {	
+					long acctUID;
+					double amount;
+					Account editThis = null;
+					
+					runAs.showAccounts();
+					System.out.println("Please select one of the above accounts.");
+					acctUID = scan.nextLong();
+					System.out.println("How much did you want to withdraw?");
+					amount = scan.nextDouble();
+					if (amount <= 0.0) {
+						System.out.println("Invalid amount.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to withdraw invalid amount.");
+					}
+					for (Account a : runAs.accts) {
+						if (a.getAccountNumber() == acctUID) {
+							editThis = a;
+						}
+					}
+					if (editThis == null) {
+						System.out.println("You lack permission to edit that account.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to access account " + acctUID);
+					} else if (amount > editThis.getBalance()) {
+						System.out.println("Exceeds amount of available money in account.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to withdraw invalid amount.");
+					} else {					
+						AccountService.withdraw(runAs.getUser().getBankID(), editThis, amount);
 						
 						log.trace("User " + runAs.getUser().getName() + " successfully withdrew " + amount
 								+ " from account " + acctUID );
 						System.out.println("Transaction complete.");
 					}
 					cc.displayMenu();
-				} 	
+				} else if (temp.equalsIgnoreCase("8")) {
+					long acctUID;
+					double amount;
+					Account editThis = null;
+					
+					runAs.showAccounts();
+					System.out.println("Please select one of the above accounts.");
+					acctUID = scan.nextLong();
+					for (Account a : runAs.accts) {
+						if (a.getAccountNumber() == acctUID) {
+							editThis = a;
+						}
+					}
+					if (editThis == null) {
+						System.out.println("You lack permission to edit that account.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to access account " + acctUID);
+					} 
+					System.out.println("Please account to transfer to.");
+					long destUID = scan.nextLong();
+					System.out.println("How much did you want to transfer?");
+					amount = scan.nextDouble();
+					if (amount <= 0.0) {
+						System.out.println("Invalid amount.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to withdraw invalid amount.");
+					}
+					if (amount > editThis.getBalance()) {
+						System.out.println("Exceeds amount of available money in source account.");
+						log.info("Attempt by " + runAs.getUser().getName() + " to withdraw invalid amount.");
+					} else {					
+						AccountService.withdraw(runAs.getUser().getBankID(), editThis, amount);
+						Account destAccount = AccountService.readByAccountUID(destUID);
+						AccountService.deposit(runAs.getUser().getBankID(), destAccount, amount);
+						
+						log.trace("User " + runAs.getUser().getName() + " successfully transferred " + amount
+								+ " from account " + acctUID + " to " + destUID);
+						System.out.println("Transaction complete.");
+					}
+					cc.displayMenu();
+				}
 			} 
 		}
 	}
