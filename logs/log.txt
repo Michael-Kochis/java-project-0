@@ -1245,3 +1245,51 @@ Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_PERMISSION VALUES (:1
 2020-03-09 08:53:05 TRACE AccountDAO:211 - 2 records returned from Accounts table.
 2020-03-09 08:53:05 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
 2020-03-09 08:53:11 TRACE BankAdminConsoleController:39 - Request from user to go to Employee menu.
+2020-03-09 08:56:13 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-09 08:56:14 INFO  Driver:15 - Application started successfully.
+2020-03-09 08:56:16 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-09 08:56:18 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-09 08:56:28 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-09 08:56:29 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-09 08:56:29 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-09 08:56:29 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-09 08:56:29 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-09 08:56:31 TRACE BankAdminConsoleController:39 - Request from user to go to Employee menu.
+2020-03-09 08:56:32 TRACE UserDAO:134 - 4 records returned from Accounts table.
+2020-03-09 08:56:32 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-09 08:56:32 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-09 08:56:32 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-09 08:56:32 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-09 08:56:32 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-09 08:56:32 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-09 08:56:32 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-09 08:56:32 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-09 10:22:30 TRACE EmployeeConsoleController:32 - Request from user to exit.
+2020-03-09 10:23:51 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-09 10:23:51 INFO  Driver:15 - Application started successfully.
+2020-03-09 10:23:57 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-09 10:24:01 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-09 10:24:07 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-09 10:24:07 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-09 10:24:07 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-09 10:24:07 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-09 10:24:07 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-09 10:24:26 TRACE AccountDAO:97 - 4 records returned from Accounts table.
+2020-03-09 10:24:44 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-09 10:24:44 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-09 10:24:44 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-09 10:24:44 TRACE BankAdminConsoleController:119 - User BigMoney successfully added 50.0 to account 1
+2020-03-09 10:25:07 TRACE AccountDAO:97 - 4 records returned from Accounts table.
+2020-03-09 10:25:10 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-09 10:25:13 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-09 10:25:13 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-09 10:25:13 TRACE BankAdminConsoleController:136 - User BigMoney successfully withdrew 50.0 from account 0
+2020-03-09 10:25:26 TRACE AccountDAO:97 - 4 records returned from Accounts table.
+2020-03-09 10:25:31 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-09 10:25:33 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-09 10:25:36 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-09 10:25:36 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-09 10:25:36 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-09 10:25:36 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-09 10:25:36 TRACE BankAdminConsoleController:160 - User BigMoney successfully transferred 50.0 from account 1 to 0
+2020-03-09 10:25:55 TRACE BankAdminConsoleController:34 - Request from user to exit.

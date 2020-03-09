@@ -49,10 +49,10 @@ Maven is required to manage dependencies required by this project.
 - [x]	Employees should be able to approve/deny open applications for accounts
 
 ## Bank Admin Functions
-- [ ]	Bank admins should be able to view and edit all accounts
+- [x]	Bank admins should be able to view and edit all accounts
 - - [x] Approving/denying accounts (see Employee)
-- - [ ] withdrawing, depositing, transferring from all accounts
-- - [ ] canceling accounts
+- - [x] withdrawing, depositing, transferring from all accounts
+- - [x] canceling accounts
 
 ## JUnit4
 - [x]	100% test coverage for the service layer is expected using JUnit4
