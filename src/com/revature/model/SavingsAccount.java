@@ -47,8 +47,7 @@ public class SavingsAccount extends Account implements SavingsAccountable {
 
 	@Override
 	public boolean viewAuthUser(User u) {
-		// TODO Auto-generated method stub
-		return false;
+		return viewAuthUID(u.getBankID());
 	}
 
 	@Override
