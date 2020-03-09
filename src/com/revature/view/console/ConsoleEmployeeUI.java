@@ -26,6 +26,8 @@ public class ConsoleEmployeeUI extends ConsoleMenu {
 		employeeMenu.add('2', "Deny account application.");
 		employeeMenu.add('A', "Access Administrative Commands.");
 		employeeMenu.add('C', "Access your customer menu.");
+		employeeMenu.add('V', "View all customers.");
+		employeeMenu.add('W', "View all accounts.");
 		employeeMenu.add('X', "Log off and return to login menu.");
 		employeeMenu.add('Q', "Log off and close application.");
 	}

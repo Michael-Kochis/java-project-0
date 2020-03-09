@@ -8,6 +8,7 @@ import com.revature.controller.model.UserLogin;
 import com.revature.enums.PermissionType;
 import com.revature.model.FullUser;
 import com.revature.model.User;
+import com.revature.service.AccountService;
 import com.revature.service.PermissionService;
 import com.revature.service.UserService;
 import com.revature.view.console.ConsoleBankAdminUI;
@@ -34,6 +35,10 @@ public class BankAdminConsoleController {
 					log.trace("Request from the user to return to log in.");
 					runAs = null;
 					UserLogin.Login();
+				} else if (temp.equalsIgnoreCase("W")) {
+					AccountService.viewAll();
+				} else if (temp.equalsIgnoreCase("V")) {
+					FullUser.viewAllUsers();
 				} else if (temp.equalsIgnoreCase("E")) {
 					if (runAs.isEmployee()) {
 					    log.trace("Request from user to go to Employee menu.");

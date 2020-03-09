@@ -27,6 +27,8 @@ public class ConsoleBankAdminUI extends ConsoleMenu {
 		bankAdminMenu.add('3', "Revoke user permissions");
 		bankAdminMenu.add('C', "Access your bank accounts as a Customer");
 		bankAdminMenu.add('E', "Access Bank Employee Commands");
+		bankAdminMenu.add('V', "View all Customers");
+		bankAdminMenu.add('W', "View all Accounts");
 		bankAdminMenu.add('X', "Log off and return to login menu.");
 		bankAdminMenu.add('Q', "Log off and close application.");
 	}

@@ -77,4 +77,12 @@ public class AccountService {
 				a.getAccountNumber(), 1L, howMuch);
 		TransactionService.create(t);		
 	}
+
+	public static void viewAll() {
+		TreeSet<Account> accts = ad.readAllAccounts();
+		for (Account a : accts) {
+			System.out.println(a);
+			System.out.println();
+		}
+	}
 }

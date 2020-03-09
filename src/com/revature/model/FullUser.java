@@ -5,6 +5,7 @@ import java.util.TreeSet;
 import com.revature.enums.PermissionType;
 import com.revature.service.AccountService;
 import com.revature.service.PermissionService;
+import com.revature.service.UserService;
 
 public class FullUser {
 	public User user;
@@ -110,6 +111,15 @@ public class FullUser {
 	@Override
 	public String toString() {
 		return "FullUser [user=" + user + ", perms=" + perms + ", accts=" + accts + "]";
+	}
+
+	public static void viewAllUsers() {
+		TreeSet<User> rawUser = UserService.readAllUsers();
+		for (User u : rawUser) {
+			FullUser fu = new FullUser(u);
+			System.out.println(fu.toString());
+			System.out.println();
+		}
 	}
 
 	

@@ -1,5 +1,7 @@
 package com.revature.service;
 
+import java.util.TreeSet;
+
 import org.apache.log4j.Logger;
 
 import com.revature.dao.UserDAO;
@@ -51,6 +53,10 @@ public class UserService {
 	
 	public void removeUser(User u) {
 		ud.deleteUser(u);
+	}
+
+	public static TreeSet<User> readAllUsers() {
+		return ud.readAllUsers();
 	}
 
 }

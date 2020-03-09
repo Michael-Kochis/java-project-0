@@ -28,24 +28,24 @@ Maven is required to manage dependencies required by this project.
 - - [ ] Personal information
 
 ## Bank Account Specification
-- [ ]	Once the account is open, customers should be able to withdraw, deposit, and transfer funds between accounts
-- - [ ] All basic validation should be done, such as trying to input negative amounts, overdrawing from accounts etc.
-- [ ] Mandatory Account information
+- [x]	Once the account is open, customers should be able to withdraw, deposit, and transfer funds between accounts
+- - [x] All basic validation should be done, such as trying to input negative amounts, overdrawing from accounts etc.
+- [x] Mandatory Account information
 - - [x] Account information
 - - [x] Account balances
 
 ## Bank Customer Functions
 - [ ] View and edit their personal information
 - [x] View account information and balances, but not directly edit
-- [ ] Customer Banking Operations
-- - [ ]  Deposit
-- - [ ]  Withdraw
-- - [ ]  Transfer
+- [x] Customer Banking Operations
+- - [x]  Deposit
+- - [x]  Withdraw
+- - [x]  Transfer
 
 
 ## Bank Employee Functions
-- [ ]	Employees of the bank should be able to view all of their customers information.
-- - [ ] May not edit customer information or account balances
+- [x]	Employees of the bank should be able to view all of their customers information.
+- - [x] May not edit customer information or account balances
 - [x]	Employees should be able to approve/deny open applications for accounts
 
 ## Bank Admin Functions
@@ -55,11 +55,11 @@ Maven is required to manage dependencies required by this project.
 - - [ ] canceling accounts
 
 ## JUnit4
-- [ ]	100% test coverage for the service layer is expected using JUnit4
+- [x]	100% test coverage for the service layer is expected using JUnit4
 
 ## Log4J
 - [x]	Logging should be accomplished using Log4J
-- - [ ] Logging of transactions will also be stored in JDBC/SQL (requirement SQL 1)
+- - [x] Logging of transactions will also be stored in JDBC/SQL (requirement SQL 1)
 
 ## SQL Requirements
 - [x] All information will be stored through JDBC/SQL

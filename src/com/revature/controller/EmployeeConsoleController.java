@@ -35,6 +35,10 @@ public class EmployeeConsoleController {
 					log.trace("Request from the user to return to log in.");
 					runAs = null;
 					UserLogin.Login();
+				} else if (temp.equalsIgnoreCase("W")) {
+					AccountService.viewAll();
+				} else if (temp.equalsIgnoreCase("V")) {
+					FullUser.viewAllUsers();
 				} else if (temp.equalsIgnoreCase("A")) {
 					if (runAs.isAdmin()) {
 					    log.trace("Request from user to go to Admin menu.");

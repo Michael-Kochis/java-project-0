@@ -1,6 +1,6 @@
 package com.revature.model;
 
-public class User {
+public class User implements Comparable {
 	private long bankID;
 	private String name;
 	private PHash password;
@@ -51,6 +51,11 @@ public class User {
 	}
 
 	@Override
+	public int compareTo(Object o) {
+		return (int)(this.bankID - ((User) o).bankID);
+	}
+	
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -86,6 +91,6 @@ public class User {
 	public String toString() {
 		return "User [bankID=" + bankID + ", name=" + name + "]";
 	}
-	
+
 
 }
