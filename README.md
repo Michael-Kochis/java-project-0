@@ -24,8 +24,8 @@ Maven is required to manage dependencies required by this project.
 ## User Accounts
 - [x]	Customers of the bank should be able to register with a username and password, and apply to open an account.
 - - [x] Customers should be able to apply for joint accounts
-- [ ] Mandatory User Information
-- - [ ] Personal information
+- [x] Mandatory User Information
+- - [x] Personal information
 
 ## Bank Account Specification
 - [x]	Once the account is open, customers should be able to withdraw, deposit, and transfer funds between accounts
@@ -35,7 +35,7 @@ Maven is required to manage dependencies required by this project.
 - - [x] Account balances
 
 ## Bank Customer Functions
-- [ ] View and edit their personal information
+- [x] View and edit their personal information
 - [x] View account information and balances, but not directly edit
 - [x] Customer Banking Operations
 - - [x]  Deposit

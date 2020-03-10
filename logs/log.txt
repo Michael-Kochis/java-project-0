@@ -2049,3 +2049,15 @@ Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_ADDRESS VALUES (:1 , 
 2020-03-10 10:35:23 TRACE AddressDAO:152 - 1 records returned from User_Address table.
 2020-03-10 10:35:23 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
 2020-03-10 10:36:38 TRACE BankAdminConsoleController:38 - Request from user to exit.
+2020-03-10 10:36:45 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-10 10:36:45 INFO  Driver:15 - Application started successfully.
+2020-03-10 10:36:47 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-10 10:36:57 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-10 10:37:01 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-10 10:37:01 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-10 10:37:01 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-10 10:37:01 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-10 10:37:01 TRACE AddressDAO:152 - 1 records returned from User_Address table.
+2020-03-10 10:37:01 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-10 10:37:04 TRACE AddressDAO:113 - 2 records returned from Address table.
+2020-03-10 10:39:53 TRACE BankAdminConsoleController:38 - Request from user to exit.
