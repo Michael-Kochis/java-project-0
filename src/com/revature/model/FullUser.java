@@ -4,6 +4,7 @@ import java.util.TreeSet;
 
 import com.revature.enums.PermissionType;
 import com.revature.service.AccountService;
+import com.revature.service.AddressService;
 import com.revature.service.PermissionService;
 import com.revature.service.UserService;
 
@@ -11,6 +12,7 @@ public class FullUser {
 	public User user;
 	public TreeSet<Permission> perms;
 	public TreeSet<Account> accts;
+	public TreeSet<Address> addr;
 	
 	public FullUser() {
 		super();
@@ -25,6 +27,7 @@ public class FullUser {
 		this.user = u;
 		this.perms = PermissionService.readPermissionsByUID(this.user.getBankID());
 		this.accts = AccountService.readAllByUserUID(this.user.getBankID());
+		this.addr = AddressService.readAllByUserUID(this.user.getBankID());
 	}
 
 	public User getUser() {
@@ -51,6 +54,14 @@ public class FullUser {
 		this.accts = accts;
 	}
 
+	public TreeSet<Address> getAddr() {
+		return addr;
+	}
+
+	public void setAddr(TreeSet<Address> addr) {
+		this.addr = addr;
+	}
+
 	public boolean isAdmin() {
 		for (Permission p : this.perms) {
 			if (p.getPermission() == PermissionType.PERM_ADM) {
@@ -74,6 +85,15 @@ public class FullUser {
 	public void showAccounts() {
 		for (Account a : this.accts) {
 			System.out.println(a);
+		}
+	}
+
+	public static void viewAllUsers() {
+		TreeSet<User> rawUser = UserService.readAllUsers();
+		for (User u : rawUser) {
+			FullUser fu = new FullUser(u);
+			System.out.println(fu.toString());
+			System.out.println();
 		}
 	}
 
@@ -110,17 +130,13 @@ public class FullUser {
 
 	@Override
 	public String toString() {
-		return "FullUser [user=" + user + ", perms=" + perms + ", accts=" + accts + "]";
+		return "FullUser [user=" + user + ", perms=" + perms + ", accts=" + accts + ", addr=" + addr + "]";
 	}
 
-	public static void viewAllUsers() {
-		TreeSet<User> rawUser = UserService.readAllUsers();
-		for (User u : rawUser) {
-			FullUser fu = new FullUser(u);
-			System.out.println(fu.toString());
-			System.out.println();
+	public void displayAddr() {
+		for (Address address : addr) {
+			System.out.println(address.toString() );
 		}
 	}
-
 	
 }

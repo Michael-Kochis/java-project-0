@@ -87,6 +87,14 @@ public class Address implements Comparable {
 			if (this.state.equalsIgnoreCase(other.state)) {
 				if (this.city.equalsIgnoreCase(other.city)) {
 					if (this.street1.equalsIgnoreCase(other.street1)) {
+						if (this.street2 == null &&
+							other.street2 == null) {
+							return 0;
+						} else if (this.street2 == null) {
+							return 10;
+						} else if (other.street2 == null) {
+							return -10;
+						}
 						return this.street2.compareToIgnoreCase(other.street2);
 					} else {
 						return this.street1.compareToIgnoreCase(other.street1);
@@ -150,7 +158,7 @@ public class Address implements Comparable {
 
 	@Override
 	public String toString() {
-		return "Address [street1=" + street1 + ", street2=" + street2 + ", city=" + city + ", state=" + state + ", zip="
+		return "Address "+ bankUID + " [street1=" + street1 + ", street2=" + street2 + ", city=" + city + ", state=" + state + ", zip="
 				+ zip + "]";
 	}
 

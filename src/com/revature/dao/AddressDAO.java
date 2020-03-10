@@ -21,12 +21,13 @@ public class AddressDAO implements AddressDAOInterface {
 	public void createAddress(Address a) {
 	      try {
 		  	    Connection testConn = JDBCConnector.getConn();
-		  	    PreparedStatement st = testConn.prepareStatement("INSERT INTO ADDRESS VALUES (?, ?, ?, ?, ?)");
-		  	    st.setString(1, a.getStreet1());
-		  	    st.setString(2, a.getStreet2());
-		  	    st.setString(3, a.getCity());
-		  	    st.setString(4, a.getState());
-		  	    st.setLong(5, a.getZip());
+		  	    PreparedStatement st = testConn.prepareStatement("INSERT INTO ADDRESS VALUES (?, ?, ?, ?, ?, ?)");
+		  	    st.setLong(1, a.getBankUID());
+		  	    st.setString(2, a.getStreet1());
+		  	    st.setString(3, a.getStreet2());
+		  	    st.setString(4, a.getCity());
+		  	    st.setString(5, a.getState());
+		  	    st.setLong(6, a.getZip());
 		  	    st.execute();
 		  	    log.trace("Single record successfully inserted into Address table.");
 			  } catch (SQLException e){
@@ -41,11 +42,11 @@ public class AddressDAO implements AddressDAOInterface {
 		PreparedStatement st = testConn.prepareStatement("INSERT INTO USER_ADDRESS VALUES (?, ?)");
   	    st.setLong(1, ownerID);
   	    st.setLong(2, addrID);
-		  	    st.execute();
-		  	    log.trace("Single record successfully inserted into User_Address table.");
-			  } catch (SQLException e){
-				log.warn("Error while inserting into User_Address table in database", e);
-			  }
+	    st.execute();
+		log.trace("Single record successfully inserted into User_Address table.");
+	  } catch (SQLException e){
+	    log.warn("Error while inserting into User_Address table in database", e);
+	  }
 	}
 
 	@Override

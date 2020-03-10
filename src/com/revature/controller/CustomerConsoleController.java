@@ -7,11 +7,13 @@ import org.apache.log4j.Logger;
 import com.revature.controller.model.UserLogin;
 import com.revature.enums.AccountType;
 import com.revature.model.Account;
+import com.revature.model.Address;
 import com.revature.model.BankID;
 import com.revature.model.FullUser;
 import com.revature.model.Transaction;
 import com.revature.model.User;
 import com.revature.service.AccountService;
+import com.revature.service.AddressService;
 import com.revature.service.UserService;
 import com.revature.test.service.TransactionService;
 import com.revature.view.console.ConsoleCustomerUI;
@@ -201,6 +203,55 @@ public class CustomerConsoleController {
 						log.trace("User " + runAs.getUser().getName() + " successfully transferred " + amount
 								+ " from account " + acctUID + " to " + destUID);
 						System.out.println("Transaction complete.");
+					}
+					cc.displayMenu();
+				} else if (temp.equalsIgnoreCase("9")) {
+					runAs.displayAddr();
+					System.out.println("Enter an address to edit, 0 to exit, any number not above to enter new.");
+					long option = scan.nextLong();  scan.nextLine();
+					if (option == 0) {						
+					} else {
+						boolean isNew = false;
+						Address toEdit = null;
+						for (Address a : runAs.addr) {
+							if (a.getBankUID() == option) {
+								toEdit = a;
+							}
+						}
+						
+						if (toEdit == null) {
+							toEdit = new Address();
+							toEdit.setBankUID(BankID.getNextBankID());
+							isNew = true;
+						}
+						System.out.println("Enter first line of street address.");
+						String nS1 = scan.nextLine();
+						toEdit.setStreet1(nS1);
+						System.out.println("Enter second line of street address.");
+						String nS2 = scan.nextLine();
+						toEdit.setStreet2(nS2);
+						System.out.println("Please enter the city.");
+						String nCity = scan.nextLine();
+						toEdit.setCity(nCity);
+						System.out.println("Please enter the state.");
+						String nState = scan.nextLine();
+						toEdit.setState(nState);
+						System.out.println("Please enter the zip code.");
+						long nZip = scan.nextLong();  scan.nextLine();
+						toEdit.setZip(nZip);
+						if (isNew) {
+							AddressService.create(toEdit);
+						} else {
+							AddressService.update(toEdit);
+						}
+						runAs.addr.add(toEdit);
+						AddressService.createUserAddress(runAs.getUser().getBankID(), toEdit.getBankUID());
+						System.out.println("Your new address has been registered to you.");
+						if (isNew) {
+							log.trace("User " + runAs.getUser().getName() + " has registered address: " + toEdit.toString());
+						} else {
+							log.trace("User " + runAs.getUser().getName() + " has modified address " + toEdit.toString());
+						}
 					}
 					cc.displayMenu();
 				}

@@ -30,6 +30,7 @@ public class ConsoleCustomerUI extends ConsoleMenu {
 		bankCustomerMenu.add('6', "Deposit into an account");
 		bankCustomerMenu.add('7', "Withdraw from an account");
 		bankCustomerMenu.add('8', "Transfer from an account you own.");
+		bankCustomerMenu.add('9', "View/Edit your customer information.");
 		bankCustomerMenu.add('A', "Access Bank Admin Commands");
 		bankCustomerMenu.add('E', "Access Bank Employee Commands");
 		bankCustomerMenu.add('X', "Log off and return to login menu.");

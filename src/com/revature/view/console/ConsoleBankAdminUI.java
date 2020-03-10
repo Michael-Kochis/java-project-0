@@ -29,6 +29,7 @@ public class ConsoleBankAdminUI extends ConsoleMenu {
 		bankAdminMenu.add('5', "Deposit into an account");
 		bankAdminMenu.add('6', "Withdraw from an account");
 		bankAdminMenu.add('7', "Transfer funds between accounts");
+		bankAdminMenu.add('8', "View and Edit addresses");
 		bankAdminMenu.add('C', "Access your bank accounts as a Customer");
 		bankAdminMenu.add('E', "Access Bank Employee Commands");
 		bankAdminMenu.add('V', "View all Customers");
