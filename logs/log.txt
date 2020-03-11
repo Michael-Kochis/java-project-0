@@ -2061,3 +2061,694 @@ Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_ADDRESS VALUES (:1 , 
 2020-03-10 10:37:01 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
 2020-03-10 10:37:04 TRACE AddressDAO:113 - 2 records returned from Address table.
 2020-03-10 10:39:53 TRACE BankAdminConsoleController:38 - Request from user to exit.
+2020-03-11 09:38:13 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-11 09:38:13 INFO  Driver:15 - Application started successfully.
+2020-03-11 09:38:25 TRACE MainMenuController:33 - Request from user to Register
+2020-03-11 09:38:29 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
+2020-03-11 09:38:37 INFO  UserDAO:166 - Attempt to retreive record from BankUser table failed
+2020-03-11 09:38:37 TRACE UserDAO:27 - Single record successfully inserted into BankUser table.
+2020-03-11 09:38:40 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-11 09:38:45 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:38:53 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:38:53 TRACE UserDAO:37 - User NewUser has successfully logged in.
+2020-03-11 09:38:53 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-11 09:38:53 TRACE AccountDAO:211 - 0 records returned from Accounts table.
+2020-03-11 09:38:53 TRACE AddressDAO:152 - 0 records returned from User_Address table.
+2020-03-11 09:38:53 TRACE RootMenuController:20 - Customer Access granted to user NewUser
+2020-03-11 09:39:02 TRACE CustomerConsoleController:67 - Customer applying for savings account
+2020-03-11 09:39:02 TRACE AccountDAO:32 - Single record successfully inserted into Accounts table.
+2020-03-11 09:39:02 TRACE AccountDAO:46 - Single record successfully inserted into UserAccounts table.
+2020-03-11 09:39:16 TRACE CustomerConsoleController:41 - Request from the user to return to log in.
+2020-03-11 09:39:18 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-11 09:39:23 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:39:26 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:39:26 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-11 09:39:26 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-11 09:39:26 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-11 09:39:26 TRACE AddressDAO:152 - 1 records returned from User_Address table.
+2020-03-11 09:39:26 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-11 09:39:37 TRACE BankAdminConsoleController:50 - Request from user to go to Employee menu.
+2020-03-11 09:39:41 TRACE AccountDAO:130 - 1 records returned from Accounts table.
+2020-03-11 09:39:41 TRACE AccountDAO:130 - 0 records returned from Accounts table.
+2020-03-11 09:39:48 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:39:48 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:39:48 TRACE EmployeeConsoleController:70 - Account 40 is approved and ready for use.
+2020-03-11 09:40:01 TRACE EmployeeConsoleController:35 - Request from the user to return to log in.
+2020-03-11 09:40:06 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:40:09 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:40:10 TRACE UserDAO:37 - User NewUser has successfully logged in.
+2020-03-11 09:40:10 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-11 09:40:10 TRACE AccountDAO:211 - 1 records returned from Accounts table.
+2020-03-11 09:40:10 TRACE AddressDAO:152 - 0 records returned from User_Address table.
+2020-03-11 09:40:10 TRACE RootMenuController:20 - Customer Access granted to user NewUser
+2020-03-11 09:40:28 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:40:28 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:40:28 TRACE CustomerConsoleController:131 - User NewUser successfully added 50.0 to account 40
+2020-03-11 09:40:47 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:40:47 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:40:47 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:40:47 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:40:47 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:40:47 TRACE CustomerConsoleController:203 - User NewUser successfully transferred 25.0 from account 40 to 1
+2020-03-11 09:40:51 TRACE CustomerConsoleController:41 - Request from the user to return to log in.
+2020-03-11 09:40:54 TRACE MainMenuController:30 - Request from the user to log in.
+2020-03-11 09:41:02 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:41:06 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:41:06 TRACE UserDAO:37 - User BigMoney has successfully logged in.
+2020-03-11 09:41:06 TRACE AccountDAO:147 - 2 records returned from Permission table.
+2020-03-11 09:41:06 TRACE AccountDAO:211 - 2 records returned from Accounts table.
+2020-03-11 09:41:06 TRACE AddressDAO:152 - 1 records returned from User_Address table.
+2020-03-11 09:41:06 TRACE RootMenuController:14 - Admin Access granted to user BigMoney
+2020-03-11 09:41:11 TRACE AccountDAO:97 - 5 records returned from Accounts table.
+2020-03-11 09:41:38 TRACE AccountDAO:97 - 5 records returned from Accounts table.
+2020-03-11 09:41:40 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:41:44 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:41:47 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:41:47 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:41:47 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:41:47 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:41:47 TRACE BankAdminConsoleController:164 - User BigMoney successfully transferred 25.0 from account 1 to 40
+2020-03-11 09:42:48 TRACE AccountDAO:97 - 5 records returned from Accounts table.
+2020-03-11 09:42:52 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:42:54 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:43:00 INFO  BankAdminConsoleController:159 - Attempt by BigMoney to withdraw invalid amount.
+2020-03-11 09:45:00 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-11 09:45:01 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:45:01 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:45:01 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:45:01 WARN  UserDAO:47 - Error while removing from User table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.UserDAO.deleteUserByUID(UserDAO.java:44)
+	at com.revature.dao.UserDAO.deleteUser(UserDAO.java:35)
+	at com.revature.service.UserService.removeUser(UserService.java:55)
+	at com.revature.test.service.UserServiceTest.testFindByName(UserServiceTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 2292, Position : 0, Sql = DELETE FROM BANKUSER WHERE BANKUID = :1 , OriginalSql = DELETE FROM BANKUSER WHERE BANKUID = ?, Error Msg = ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 44 more
+2020-03-11 09:45:01 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:45:01 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:45:01 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:45:01 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:45:01 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:45:01 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:45:02 WARN  UserDAO:47 - Error while removing from User table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.UserDAO.deleteUserByUID(UserDAO.java:44)
+	at com.revature.dao.UserDAO.deleteUser(UserDAO.java:35)
+	at com.revature.service.UserService.removeUser(UserService.java:55)
+	at com.revature.test.service.UserServiceTest.testFindByWrongName(UserServiceTest.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 2292, Position : 0, Sql = DELETE FROM BANKUSER WHERE BANKUID = :1 , OriginalSql = DELETE FROM BANKUSER WHERE BANKUID = ?, Error Msg = ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 44 more
+2020-03-11 09:45:02 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:45:02 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:45:02 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
+2020-03-11 09:45:02 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:45:02 TRACE AddressDAO:113 - 2 records returned from Address table.
+2020-03-11 09:45:02 TRACE AddressDAO:152 - 1 records returned from User_Address table.
+2020-03-11 09:45:02 WARN  AddressDAO:34 - Error while inserting into Address table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVABANK.SYS_C005420) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.AddressDAO.createAddress(AddressDAO.java:31)
+	at com.revature.service.AddressService.create(AddressService.java:33)
+	at com.revature.test.service.AddressServiceTest.testCreate(AddressServiceTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 1, Position : 0, Sql = INSERT INTO ADDRESS VALUES (:1 , :2 , :3 , :4 , :5 , :6 ), OriginalSql = INSERT INTO ADDRESS VALUES (?, ?, ?, ?, ?, ?), Error Msg = ORA-00001: unique constraint (JAVABANK.SYS_C005420) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 43 more
+2020-03-11 09:45:02 WARN  AddressDAO:48 - Error while inserting into User_Address table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVABANK.SYS_C005421) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.AddressDAO.createUserAddress(AddressDAO.java:45)
+	at com.revature.service.AddressService.createUserAddress(AddressService.java:37)
+	at com.revature.test.service.AddressServiceTest.testCreate(AddressServiceTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_ADDRESS VALUES (:1 , :2 ), OriginalSql = INSERT INTO USER_ADDRESS VALUES (?, ?), Error Msg = ORA-00001: unique constraint (JAVABANK.SYS_C005421) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 43 more
+2020-03-11 09:45:02 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:45:02 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:45:02 TRACE AddressDAO:207 - Record successfully updated in Address table in database
+2020-03-11 09:45:02 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:45:02 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:45:02 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:45:02 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:45:02 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:45:02 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:45:02 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:45:02 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:45:02 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:45:02 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-11 09:45:02 TRACE AccountDAO:41 - Single record successfully inserted into User_Permission table.
+2020-03-11 09:45:02 TRACE AccountDAO:147 - 1 records returned from Permission table.
+2020-03-11 09:45:02 WARN  AccountDAO:43 - Error while inserting into User_Permission table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVABANK.SYS_C005355) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.PermissionsDAO.createUserPermission(PermissionsDAO.java:40)
+	at com.revature.service.PermissionService.createPermission(PermissionService.java:18)
+	at com.revature.test.service.PermissionServiceTest.testRevokePermission(PermissionServiceTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_PERMISSION VALUES (:1 , :2 ), OriginalSql = INSERT INTO USER_PERMISSION VALUES (?, ?), Error Msg = ORA-00001: unique constraint (JAVABANK.SYS_C005355) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 43 more
+2020-03-11 09:45:02 TRACE AccountDAO:67 - Records successfully deleted from User_Permission table in database
+2020-03-11 09:45:02 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-11 09:59:55 TRACE JDBCConnector:35 - New connection to database established.
+2020-03-11 09:59:56 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:59:56 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:59:56 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:59:56 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:59:56 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:59:56 TRACE AccountDAO:174 - Record successfully updated in Accounts table in database
+2020-03-11 09:59:56 TRACE TransactionDAO:28 - Single record successfully inserted into BankTrans table.
+2020-03-11 09:59:56 TRACE AccountDAO:153 - Single record returned from Accounts table.
+2020-03-11 09:59:56 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:59:56 TRACE AddressDAO:113 - 2 records returned from Address table.
+2020-03-11 09:59:56 TRACE AddressDAO:152 - 1 records returned from User_Address table.
+2020-03-11 09:59:56 WARN  AddressDAO:34 - Error while inserting into Address table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVABANK.SYS_C005420) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.AddressDAO.createAddress(AddressDAO.java:31)
+	at com.revature.service.AddressService.create(AddressService.java:33)
+	at com.revature.test.service.AddressServiceTest.testCreate(AddressServiceTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 1, Position : 0, Sql = INSERT INTO ADDRESS VALUES (:1 , :2 , :3 , :4 , :5 , :6 ), OriginalSql = INSERT INTO ADDRESS VALUES (?, ?, ?, ?, ?, ?), Error Msg = ORA-00001: unique constraint (JAVABANK.SYS_C005420) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 51 more
+2020-03-11 09:59:56 WARN  AddressDAO:48 - Error while inserting into User_Address table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVABANK.SYS_C005421) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.AddressDAO.createUserAddress(AddressDAO.java:45)
+	at com.revature.service.AddressService.createUserAddress(AddressService.java:37)
+	at com.revature.test.service.AddressServiceTest.testCreate(AddressServiceTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_ADDRESS VALUES (:1 , :2 ), OriginalSql = INSERT INTO USER_ADDRESS VALUES (?, ?), Error Msg = ORA-00001: unique constraint (JAVABANK.SYS_C005421) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 51 more
+2020-03-11 09:59:56 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:59:56 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:59:56 TRACE AddressDAO:207 - Record successfully updated in Address table in database
+2020-03-11 09:59:56 TRACE AddressDAO:183 - Single record returned from Address table.
+2020-03-11 09:59:56 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-11 09:59:56 TRACE AccountDAO:41 - Single record successfully inserted into User_Permission table.
+2020-03-11 09:59:56 TRACE AccountDAO:147 - 1 records returned from Permission table.
+2020-03-11 09:59:56 WARN  AccountDAO:43 - Error while inserting into User_Permission table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (JAVABANK.SYS_C005355) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.PermissionsDAO.createUserPermission(PermissionsDAO.java:40)
+	at com.revature.service.PermissionService.createPermission(PermissionService.java:18)
+	at com.revature.test.service.PermissionServiceTest.testRevokePermission(PermissionServiceTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 1, Position : 0, Sql = INSERT INTO USER_PERMISSION VALUES (:1 , :2 ), OriginalSql = INSERT INTO USER_PERMISSION VALUES (?, ?), Error Msg = ORA-00001: unique constraint (JAVABANK.SYS_C005355) violated
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 51 more
+2020-03-11 09:59:56 TRACE AccountDAO:67 - Records successfully deleted from User_Permission table in database
+2020-03-11 09:59:56 TRACE AccountDAO:147 - 0 records returned from Permission table.
+2020-03-11 09:59:57 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:59:57 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:59:57 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:59:57 WARN  UserDAO:47 - Error while removing from User table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.UserDAO.deleteUserByUID(UserDAO.java:44)
+	at com.revature.dao.UserDAO.deleteUser(UserDAO.java:35)
+	at com.revature.service.UserService.removeUser(UserService.java:55)
+	at com.revature.test.service.UserServiceTest.testFindByName(UserServiceTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 2292, Position : 0, Sql = DELETE FROM BANKUSER WHERE BANKUID = :1 , OriginalSql = DELETE FROM BANKUSER WHERE BANKUID = ?, Error Msg = ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 52 more
+2020-03-11 09:59:57 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:59:57 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:59:57 TRACE UserDAO:195 - Single record returned from BankUser table.
+2020-03-11 09:59:57 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:59:57 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:59:57 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:59:57 WARN  UserDAO:47 - Error while removing from User table in database
+java.sql.SQLIntegrityConstraintViolationException: ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:970)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3778)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1081)
+	at com.revature.dao.UserDAO.deleteUserByUID(UserDAO.java:44)
+	at com.revature.dao.UserDAO.deleteUser(UserDAO.java:35)
+	at com.revature.service.UserService.removeUser(UserService.java:55)
+	at com.revature.test.service.UserServiceTest.testFindByWrongName(UserServiceTest.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: Error : 2292, Position : 0, Sql = DELETE FROM BANKUSER WHERE BANKUID = :1 , OriginalSql = DELETE FROM BANKUSER WHERE BANKUID = ?, Error Msg = ORA-02292: integrity constraint (JAVABANK.SYS_C005365) violated - child record found
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 52 more
+2020-03-11 09:59:57 TRACE UserDAO:163 - Single record returned from BankUser table.
+2020-03-11 09:59:57 INFO  UserService:48 - Attept to insert existing user into database: User [bankID=1, name=Twonk]
+2020-03-11 09:59:57 INFO  UserDAO:198 - Attempt to retreive record from BankUser table failed
